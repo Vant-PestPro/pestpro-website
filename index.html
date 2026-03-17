@@ -12,11 +12,12 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --green: #2d7a3a;
-      --green-dark: #1f5828;
-      --green-light: #3d9e4e;
-      --green-bg: #f0f7f1;
-      --gold: #e8a020;
+      --green: #1a2557;
+      --green-dark: #111840;
+      --green-light: #2a3a7a;
+      --green-bg: #f0f2fa;
+      --gold: #FFB800;
+      --red: #cc2200;
       --white: #ffffff;
       --gray: #f5f6f7;
       --text: #1a1a1a;
@@ -60,7 +61,7 @@
 
     /* HERO */
     #hero {
-      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 60%, #4caf63 100%);
+      background: linear-gradient(135deg, #111840 0%, #1a2557 60%, #2a3a7a 100%);
       color: var(--white); padding: 5rem 5% 4rem;
       position: relative; overflow: hidden;
     }
@@ -260,7 +261,7 @@
 
     /* CTA BANNER */
     .cta-banner {
-      background: linear-gradient(135deg, var(--green-dark), var(--green));
+      background: linear-gradient(135deg, #111840, #1a2557);
       color: var(--white); padding: 4rem 5%; text-align: center;
     }
     .cta-banner h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 0.8rem; }
@@ -302,8 +303,7 @@
 <nav>
   <div class="nav-inner">
     <a href="/" class="nav-logo">
-      <span class="nav-logo-icon">🦟</span>
-      Pest Pro LLC
+      <img src="assets/logos/logo-official.jpg" alt="Pest Pro LLC" style="height:44px;width:auto;object-fit:contain;" />
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
@@ -438,7 +438,7 @@
   <div class="section-inner">
     <div class="about-grid">
       <div class="about-visual fade-up">
-        <div class="about-visual-icon">🛡️</div>
+        <img src="assets/mascot/vant-official.jpg" alt="Vant - Pest Pro Mascot" style="width:180px;height:auto;margin:0 auto 1rem;display:block;" />
         <h3 style="font-weight:800;font-size:1.3rem;color:var(--green-dark);">Pest Pro LLC</h3>
         <p style="color:var(--muted);font-size:0.9rem;margin-top:0.5rem;">Independently owned &amp; operated in Central Florida</p>
         <div class="founded-badge">Rooted in experience since 1986</div>
@@ -740,7 +740,7 @@
   <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-brand">
-        <h3>🦟 Pest Pro LLC</h3>
+        <img src="assets/logos/logo-official.jpg" alt="Pest Pro LLC" style="height:50px;width:auto;margin-bottom:1rem;display:block;border-radius:4px;" />
         <p>Central Florida's trusted pest control experts. Rooted in science, driven by results. Independently owned and operated since 2020, with a family legacy dating back to 1986.</p>
         <a href="tel:4079222276" class="footer-phone">(407) 922-2276</a>
       </div>
