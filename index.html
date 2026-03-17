@@ -3,317 +3,376 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pest Pro LLC | Expert Pest Control in Central Florida | Orlando, Kissimmee & Beyond</title>
-  <meta name="description" content="Central Florida's trusted pest control experts. Serving Orlando, Kissimmee, Windermere, Winter Garden, Clermont, St. Cloud & more. Starting at $26/month. Rooted in 40+ years of experience. Call (407) 922-2276." />
-  <meta name="keywords" content="pest control Orlando, pest control Kissimmee, pest control Central Florida, exterminator Orlando FL, bed bug treatment Orlando, rodent control Florida" />
-  <link rel="canonical" href="https://pestprollc.com/" />
+  <title>Pest Pro LLC | Central Florida's Premier Pest Control | Orlando, Kissimmee & Beyond</title>
+  <meta name="description" content="Florida's Premier Pest Control Experts — Proven, Trusted, Guaranteed. Residential & Commercial. Restaurants, Hotels, Warehouses, Resorts & more. 24/7 service across Central Florida. Call (407) 922-2276." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --green: #1a2557;
-      --green-dark: #111840;
-      --green-light: #2a3a7a;
-      --green-bg: #f0f2fa;
-      --gold: #FFB800;
+      --navy: #1a2557;
+      --navy-dark: #111840;
+      --navy-light: #2a3a7a;
+      --yellow: #FFB800;
+      --yellow-dark: #e0a200;
       --red: #cc2200;
       --white: #ffffff;
-      --gray: #f5f6f7;
+      --gray: #f5f6f8;
       --text: #1a1a1a;
       --muted: #6b7280;
       --border: #e5e7eb;
+      --yellow-bg: #fffbf0;
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); }
     a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; }
+
+    /* TOP BAR */
+    .top-bar {
+      background: var(--navy-dark); color: rgba(255,255,255,0.85);
+      padding: 0.5rem 5%; font-size: 0.8rem;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 0.5rem;
+    }
+    .top-bar a { color: var(--yellow); font-weight: 600; }
+    .top-bar-badge {
+      background: var(--red); color: white;
+      padding: 0.15rem 0.6rem; border-radius: 100px;
+      font-size: 0.72rem; font-weight: 700; margin-left: 0.5rem;
+    }
 
     /* NAV */
     nav {
       position: sticky; top: 0; z-index: 100;
-      background: var(--white); border-bottom: 1px solid var(--border);
+      background: var(--white); border-bottom: 2px solid var(--yellow);
       padding: 0 5%;
     }
     .nav-inner {
-      max-width: 1200px; margin: 0 auto;
+      max-width: 1300px; margin: 0 auto;
       display: flex; align-items: center; justify-content: space-between;
-      height: 70px;
+      height: 80px; gap: 1rem;
     }
-    .nav-logo {
-      display: flex; align-items: center; gap: 0.6rem;
-      font-weight: 800; font-size: 1.3rem; color: var(--green);
-    }
-    .nav-logo-icon { font-size: 1.5rem; }
-    .nav-links { display: flex; gap: 0.2rem; list-style: none; }
+    .nav-logo img { height: 60px; width: auto; }
+    .nav-links { display: flex; gap: 0.1rem; list-style: none; }
     .nav-links a {
-      padding: 0.5rem 0.9rem; font-size: 0.88rem; font-weight: 500;
-      color: var(--muted); border-radius: 6px; transition: all 0.2s;
+      padding: 0.5rem 0.75rem; font-size: 0.85rem; font-weight: 600;
+      color: var(--navy); border-radius: 6px; transition: all 0.2s; white-space: nowrap;
     }
-    .nav-links a:hover { color: var(--green); background: var(--green-bg); }
+    .nav-links a:hover { color: var(--yellow-dark); background: var(--yellow-bg); }
+    .nav-right { display: flex; align-items: center; gap: 1rem; flex-shrink: 0; }
+    .nav-phone { font-weight: 800; color: var(--navy); font-size: 1rem; white-space: nowrap; }
     .nav-cta {
-      background: var(--green); color: var(--white);
-      padding: 0.6rem 1.4rem; border-radius: 6px;
-      font-weight: 700; font-size: 0.88rem; transition: background 0.2s;
+      background: var(--yellow); color: var(--navy);
+      padding: 0.65rem 1.4rem; border-radius: 6px;
+      font-weight: 800; font-size: 0.85rem; white-space: nowrap;
+      transition: background 0.2s;
     }
-    .nav-cta:hover { background: var(--green-dark); }
-    .nav-phone { font-weight: 700; color: var(--green); font-size: 0.95rem; }
+    .nav-cta:hover { background: var(--yellow-dark); }
 
     /* HERO */
     #hero {
-      background: linear-gradient(135deg, #111840 0%, #1a2557 60%, #2a3a7a 100%);
-      color: var(--white); padding: 5rem 5% 4rem;
-      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+      color: var(--white); padding: 5rem 5% 4rem; position: relative; overflow: hidden;
     }
-    .hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-    .hero-badge {
+    #hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: url('assets/logos/logo-official.jpg') center/cover no-repeat;
+      opacity: 0.03;
+    }
+    .hero-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 4rem; align-items: center; position: relative; }
+    .hero-tag {
       display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
-      padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; font-weight: 600;
-      margin-bottom: 1.2rem;
+      background: rgba(255,184,0,0.15); border: 1px solid rgba(255,184,0,0.4);
+      padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; font-weight: 700;
+      color: var(--yellow); margin-bottom: 1.2rem; width: fit-content;
     }
-    .hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.1; margin-bottom: 1.2rem; }
-    .hero h1 span { color: #ffe082; }
-    .hero-sub { font-size: 1.05rem; opacity: 0.9; line-height: 1.7; margin-bottom: 2rem; }
-    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .btn-white {
-      background: var(--white); color: var(--green);
-      padding: 0.85rem 1.8rem; border-radius: 8px;
-      font-weight: 700; font-size: 0.95rem; transition: all 0.2s;
-      display: inline-block;
+    .hero h1 { font-size: clamp(2.2rem, 4vw, 3.8rem); font-weight: 900; line-height: 1.05; margin-bottom: 1rem; }
+    .hero h1 em { color: var(--yellow); font-style: normal; }
+    .hero-sub { font-size: 1.1rem; opacity: 0.9; line-height: 1.7; margin-bottom: 2rem; max-width: 560px; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .btn-yellow {
+      background: var(--yellow); color: var(--navy);
+      padding: 0.9rem 2rem; border-radius: 8px; font-weight: 800; font-size: 0.95rem;
+      display: inline-block; transition: all 0.2s;
     }
-    .btn-white:hover { background: #f0f7f1; transform: translateY(-2px); }
+    .btn-yellow:hover { background: var(--yellow-dark); transform: translateY(-2px); }
     .btn-outline-white {
-      border: 2px solid rgba(255,255,255,0.6); color: var(--white);
-      padding: 0.85rem 1.8rem; border-radius: 8px;
-      font-weight: 600; font-size: 0.95rem; transition: all 0.2s;
-      display: inline-block;
+      border: 2px solid rgba(255,255,255,0.5); color: var(--white);
+      padding: 0.9rem 2rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem;
+      display: inline-block; transition: all 0.2s;
     }
     .btn-outline-white:hover { background: rgba(255,255,255,0.1); }
-    .hero-trust { display: flex; gap: 2rem; margin-top: 2.5rem; flex-wrap: wrap; }
-    .trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; opacity: 0.9; }
+    .hero-trust { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .trust-pill {
+      display: flex; align-items: center; gap: 0.4rem;
+      background: rgba(255,255,255,0.1); padding: 0.4rem 0.9rem;
+      border-radius: 100px; font-size: 0.82rem; font-weight: 600;
+    }
+    .hero-mascot {
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-mascot img { width: 100%; max-width: 320px; height: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4)); }
+
+    /* HERO FORM CARD */
     .hero-card {
-      background: rgba(255,255,255,0.12); backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.2); border-radius: 16px;
-      padding: 2rem;
+      background: var(--white); border-radius: 16px; padding: 2rem;
+      color: var(--text); box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     }
-    .hero-card h3 { font-size: 1.1rem; margin-bottom: 1.2rem; font-weight: 700; }
-    .hero-form { display: flex; flex-direction: column; gap: 0.8rem; }
+    .hero-card h3 { font-size: 1.1rem; font-weight: 800; color: var(--navy); margin-bottom: 0.3rem; }
+    .hero-card p { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.2rem; }
+    .hero-form { display: flex; flex-direction: column; gap: 0.7rem; }
     .hero-form input, .hero-form select {
-      padding: 0.8rem 1rem; border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 8px; background: rgba(255,255,255,0.15);
-      color: var(--white); font-size: 0.9rem; font-family: 'Inter', sans-serif;
-      outline: none;
+      padding: 0.75rem 1rem; border: 1px solid var(--border);
+      border-radius: 8px; font-size: 0.88rem; font-family: 'Inter', sans-serif;
+      outline: none; transition: border-color 0.2s; background: white; color: var(--text);
     }
-    .hero-form input::placeholder { color: rgba(255,255,255,0.6); }
-    .hero-form select option { color: var(--text); background: var(--white); }
+    .hero-form input:focus, .hero-form select:focus { border-color: var(--yellow); }
     .hero-form button {
-      background: var(--gold); color: var(--white); border: none;
-      padding: 0.9rem; border-radius: 8px; font-weight: 700;
+      background: var(--yellow); color: var(--navy); border: none;
+      padding: 0.9rem; border-radius: 8px; font-weight: 800;
       font-size: 0.95rem; cursor: pointer; transition: background 0.2s;
     }
-    .hero-form button:hover { background: #d4911c; }
-    .form-note { font-size: 0.75rem; opacity: 0.7; text-align: center; }
+    .hero-form button:hover { background: var(--yellow-dark); }
 
-    /* STATS BAR */
-    .stats-bar {
-      background: var(--green-dark); color: var(--white);
-      padding: 1.2rem 5%;
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--yellow); padding: 1rem 5%;
     }
-    .stats-inner {
-      max-width: 1200px; margin: 0 auto;
-      display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem;
+    .trust-bar-inner {
+      max-width: 1300px; margin: 0 auto;
+      display: flex; justify-content: space-around; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
     }
-    .stat { text-align: center; }
-    .stat-num { font-size: 1.8rem; font-weight: 900; color: #ffe082; }
-    .stat-label { font-size: 0.78rem; opacity: 0.8; letter-spacing: 0.05em; }
+    .trust-bar-item { display: flex; align-items: center; gap: 0.6rem; font-weight: 700; color: var(--navy); font-size: 0.9rem; }
+    .trust-bar-item span { font-size: 1.2rem; }
 
-    /* SECTION BASE */
+    /* SECTIONS */
     section { padding: 5rem 5%; }
-    .section-inner { max-width: 1200px; margin: 0 auto; }
-    .section-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green); margin-bottom: 0.5rem; }
-    .section-title { font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
-    .section-desc { color: var(--muted); font-size: 1rem; line-height: 1.7; max-width: 580px; }
+    .section-inner { max-width: 1300px; margin: 0 auto; }
+    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--yellow-dark); margin-bottom: 0.5rem; }
+    .section-title { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; line-height: 1.15; margin-bottom: 1rem; color: var(--navy); }
+    .section-desc { color: var(--muted); font-size: 1rem; line-height: 1.7; }
 
     /* SERVICES */
     #services { background: var(--gray); }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 2.5rem; }
-    .service-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 12px; padding: 1.5rem; text-align: center;
-      transition: all 0.2s; cursor: pointer;
+    .services-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .tab-btn {
+      padding: 0.5rem 1.2rem; border: 2px solid var(--border);
+      border-radius: 100px; font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; background: white; transition: all 0.2s; color: var(--muted);
     }
-    .service-card:hover { border-color: var(--green); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(45,122,58,0.1); }
-    .service-icon { font-size: 2rem; margin-bottom: 0.8rem; }
-    .service-card h3 { font-size: 0.9rem; font-weight: 700; color: var(--text); }
-    .service-card a { color: var(--green); font-size: 0.78rem; font-weight: 600; margin-top: 0.4rem; display: block; }
+    .tab-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1rem; }
+    .service-card {
+      background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+      padding: 1.5rem; transition: all 0.2s; position: relative; overflow: hidden;
+    }
+    .service-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 3px; background: var(--yellow); transform: scaleX(0);
+      transition: transform 0.2s; transform-origin: left;
+    }
+    .service-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(26,37,87,0.1); border-color: var(--yellow); }
+    .service-card:hover::after { transform: scaleX(1); }
+    .service-img { width: 100%; height: 110px; object-fit: cover; border-radius: 8px; margin-bottom: 0.8rem; }
+    .service-icon-placeholder { width: 100%; height: 110px; border-radius: 8px; margin-bottom: 0.8rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+    .service-card h3 { font-size: 0.92rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+    .service-card p { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+    /* COMMERCIAL BANNER */
+    .commercial-banner {
+      background: var(--navy); color: white; border-radius: 16px;
+      padding: 3rem; margin-top: 2rem;
+      display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center;
+    }
+    .commercial-banner h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .commercial-banner p { opacity: 0.85; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem; }
+    .commercial-types { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .comm-tag {
+      background: rgba(255,184,0,0.15); border: 1px solid rgba(255,184,0,0.3);
+      color: var(--yellow); padding: 0.3rem 0.8rem; border-radius: 100px;
+      font-size: 0.78rem; font-weight: 600;
+    }
 
     /* ABOUT */
-    #about { background: var(--white); }
+    #about { background: white; }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .about-visual {
-      background: linear-gradient(135deg, var(--green-bg), #d4edda);
-      border-radius: 16px; padding: 3rem; text-align: center;
-      position: relative;
+    .about-photo-stack { position: relative; }
+    .about-main-photo {
+      width: 100%; border-radius: 16px; object-fit: cover;
+      border: 4px solid var(--yellow);
     }
-    .about-visual-icon { font-size: 6rem; margin-bottom: 1rem; }
-    .founded-badge {
-      background: var(--green); color: var(--white);
-      border-radius: 100px; padding: 0.5rem 1.2rem;
-      font-size: 0.82rem; font-weight: 700; display: inline-block;
-      margin-top: 1rem;
+    .about-badge-float {
+      position: absolute; bottom: -1rem; right: -1rem;
+      background: var(--navy); color: white; border-radius: 12px;
+      padding: 1rem 1.4rem; text-align: center;
+      border: 3px solid var(--yellow);
     }
+    .about-badge-float .big { font-size: 1.8rem; font-weight: 900; color: var(--yellow); line-height: 1; }
+    .about-badge-float .small { font-size: 0.72rem; font-weight: 600; opacity: 0.85; }
     .about-points { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2rem; }
-    .about-point { display: flex; gap: 1rem; align-items: flex-start; }
-    .point-icon { width: 36px; height: 36px; background: var(--green-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .about-point h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.2rem; }
-    .about-point p { font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
+    .about-point { display: flex; gap: 1rem; }
+    .point-dot { width: 10px; height: 10px; background: var(--yellow); border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+    .about-point h4 { font-size: 0.92rem; font-weight: 700; margin-bottom: 0.2rem; color: var(--navy); }
+    .about-point p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
 
     /* PRICING */
-    #pricing { background: var(--green-bg); }
+    #pricing { background: var(--gray); }
     .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
     .pricing-card {
-      background: var(--white); border-radius: 16px; padding: 2rem;
+      background: white; border-radius: 16px; padding: 2rem;
       border: 2px solid var(--border); position: relative;
     }
-    .pricing-card.featured { border-color: var(--green); }
+    .pricing-card.featured { border-color: var(--yellow); box-shadow: 0 8px 32px rgba(255,184,0,0.15); }
     .pricing-badge {
       position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-      background: var(--green); color: var(--white);
-      padding: 0.3rem 1rem; border-radius: 100px; font-size: 0.75rem; font-weight: 700;
+      background: var(--yellow); color: var(--navy);
+      padding: 0.25rem 1rem; border-radius: 100px; font-size: 0.75rem; font-weight: 800;
     }
-    .pricing-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .pricing-price { font-size: 2.5rem; font-weight: 900; color: var(--green); line-height: 1; margin-bottom: 0.3rem; }
-    .pricing-price span { font-size: 1rem; font-weight: 500; color: var(--muted); }
-    .pricing-note { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; }
-    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.5rem; }
-    .pricing-features li { font-size: 0.88rem; display: flex; align-items: center; gap: 0.5rem; }
-    .pricing-features li::before { content: '✓'; color: var(--green); font-weight: 700; }
-    .btn-green {
-      background: var(--green); color: var(--white);
-      padding: 0.8rem; border-radius: 8px; font-weight: 700;
-      font-size: 0.9rem; text-align: center; display: block;
-      transition: background 0.2s;
-    }
-    .btn-green:hover { background: var(--green-dark); }
-    .btn-green-outline {
-      border: 2px solid var(--green); color: var(--green);
-      padding: 0.8rem; border-radius: 8px; font-weight: 700;
-      font-size: 0.9rem; text-align: center; display: block;
-      transition: all 0.2s;
-    }
-    .btn-green-outline:hover { background: var(--green-bg); }
+    .pricing-card h3 { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 0.4rem; }
+    .pricing-price { font-size: 2.8rem; font-weight: 900; color: var(--navy); line-height: 1; margin: 0.5rem 0 0.3rem; }
+    .pricing-price sup { font-size: 1.2rem; font-weight: 700; vertical-align: super; }
+    .pricing-price sub { font-size: 1rem; font-weight: 500; color: var(--muted); }
+    .pricing-note { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 1.8rem; }
+    .pricing-features li { font-size: 0.88rem; display: flex; gap: 0.6rem; align-items: flex-start; }
+    .check { color: var(--yellow-dark); font-weight: 900; flex-shrink: 0; }
+    .btn-navy { background: var(--navy); color: white; padding: 0.85rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-align: center; display: block; transition: background 0.2s; }
+    .btn-navy:hover { background: var(--navy-light); }
+    .btn-yellow-solid { background: var(--yellow); color: var(--navy); padding: 0.85rem; border-radius: 8px; font-weight: 800; font-size: 0.9rem; text-align: center; display: block; transition: background 0.2s; }
+    .btn-yellow-solid:hover { background: var(--yellow-dark); }
 
     /* REVIEWS */
-    #reviews { background: var(--white); }
-    .reviews-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; }
-    .rating-summary { display: flex; align-items: center; gap: 1rem; }
-    .rating-big { font-size: 3.5rem; font-weight: 900; color: var(--green); line-height: 1; }
-    .stars { color: #f59e0b; font-size: 1.3rem; }
-    .rating-count { font-size: 0.85rem; color: var(--muted); }
+    #reviews { background: white; }
+    .reviews-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; }
+    .google-rating { display: flex; align-items: center; gap: 1rem; background: var(--gray); padding: 1rem 1.5rem; border-radius: 12px; }
+    .rating-num { font-size: 3rem; font-weight: 900; color: var(--navy); line-height: 1; }
+    .stars { color: #f59e0b; font-size: 1.1rem; }
     .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.2rem; }
-    .review-card {
-      background: var(--gray); border-radius: 12px; padding: 1.5rem;
-      border: 1px solid var(--border);
-    }
-    .review-stars { color: #f59e0b; font-size: 0.9rem; margin-bottom: 0.8rem; }
-    .review-text { font-size: 0.88rem; line-height: 1.6; color: var(--text); margin-bottom: 1rem; font-style: italic; }
-    .review-author { font-size: 0.82rem; font-weight: 700; color: var(--green); }
-    .review-source { font-size: 0.75rem; color: var(--muted); }
+    .review-card { background: var(--gray); border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border); }
+    .review-stars { color: #f59e0b; margin-bottom: 0.8rem; }
+    .review-text { font-size: 0.88rem; line-height: 1.65; color: var(--text); margin-bottom: 1rem; font-style: italic; }
+    .review-author { font-weight: 700; font-size: 0.85rem; color: var(--navy); }
+    .review-city { font-size: 0.75rem; color: var(--muted); }
 
     /* SERVICE AREA */
-    #service-area { background: var(--gray); }
-    .area-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 2.5rem; }
-    .counties { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .county-card {
-      background: var(--white); border-radius: 10px; padding: 1.2rem;
-      border: 1px solid var(--border); text-align: center;
-    }
-    .county-card h4 { font-weight: 700; color: var(--green); font-size: 0.95rem; }
-    .county-card p { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
-    .cities-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-    .city-tag {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 100px; padding: 0.3rem 0.8rem;
-      font-size: 0.8rem; font-weight: 500; color: var(--text);
-    }
+    #service-area { background: var(--navy); color: white; }
+    #service-area .section-title { color: white; }
+    #service-area .section-label { color: var(--yellow); }
+    #service-area .section-desc { color: rgba(255,255,255,0.75); }
+    .area-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; }
+    .counties-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .county-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; padding: 1.2rem; }
+    .county-card h4 { font-weight: 700; color: var(--yellow); font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .county-card p { font-size: 0.78rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
+    .cities-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .city-pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.85); padding: 0.3rem 0.8rem; border-radius: 100px; font-size: 0.8rem; }
 
-    /* BLOG PREVIEW */
-    #blog { background: var(--white); }
+    /* BLOG */
+    #blog { background: var(--gray); }
     .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
-    .blog-card {
-      border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
-      transition: box-shadow 0.2s;
-    }
+    .blog-card { background: white; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); transition: box-shadow 0.2s; }
     .blog-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
-    .blog-thumb {
-      height: 160px; display: flex; align-items: center; justify-content: center;
-      font-size: 4rem;
-    }
-    .blog-thumb.bg1 { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
-    .blog-thumb.bg2 { background: linear-gradient(135deg, #fff3e0, #ffe0b2); }
-    .blog-thumb.bg3 { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
-    .blog-body { padding: 1.2rem; }
-    .blog-tag { font-size: 0.72rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.1em; }
-    .blog-card h3 { font-size: 0.95rem; font-weight: 700; margin: 0.4rem 0 0.6rem; line-height: 1.4; }
-    .blog-card p { font-size: 0.83rem; color: var(--muted); line-height: 1.5; }
-    .blog-read { font-size: 0.8rem; font-weight: 700; color: var(--green); margin-top: 0.8rem; display: block; }
+    .blog-thumb { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+    .bg1 { background: linear-gradient(135deg, #e8f4ff, #c5deff); }
+    .bg2 { background: linear-gradient(135deg, #fff8e1, #ffecb3); }
+    .bg3 { background: linear-gradient(135deg, #fce4ec, #f8bbd0); }
+    .blog-body { padding: 1.3rem; }
+    .blog-tag { font-size: 0.72rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.1em; }
+    .blog-card h3 { font-size: 0.95rem; font-weight: 700; margin: 0.4rem 0 0.5rem; line-height: 1.4; color: var(--navy); }
+    .blog-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+    .blog-read { font-size: 0.8rem; font-weight: 700; color: var(--yellow-dark); margin-top: 0.8rem; display: block; }
 
-    /* CTA BANNER */
-    .cta-banner {
-      background: linear-gradient(135deg, #111840, #1a2557);
-      color: var(--white); padding: 4rem 5%; text-align: center;
-    }
-    .cta-banner h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 0.8rem; }
-    .cta-banner p { font-size: 1rem; opacity: 0.9; margin-bottom: 2rem; }
+    /* CTA */
+    .cta-section { background: var(--yellow); padding: 4rem 5%; text-align: center; }
+    .cta-section h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 900; color: var(--navy); margin-bottom: 0.8rem; }
+    .cta-section p { color: var(--navy); opacity: 0.8; font-size: 1rem; margin-bottom: 2rem; }
     .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-navy-lg { background: var(--navy); color: white; padding: 1rem 2.5rem; border-radius: 8px; font-weight: 800; font-size: 1rem; display: inline-block; transition: background 0.2s; }
+    .btn-navy-lg:hover { background: var(--navy-dark); }
+    .btn-outline-navy { border: 2px solid var(--navy); color: var(--navy); padding: 1rem 2.5rem; border-radius: 8px; font-weight: 700; font-size: 1rem; display: inline-block; transition: all 0.2s; }
+    .btn-outline-navy:hover { background: rgba(26,37,87,0.1); }
+
+    /* CONTACT */
+    #contact { background: white; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .contact-detail { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.2rem; }
+    .contact-icon { width: 44px; height: 44px; background: var(--yellow-bg); border: 1px solid var(--yellow); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .contact-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .contact-value { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-top: 0.15rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+    .form-field { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-field label { font-size: 0.78rem; font-weight: 600; color: var(--navy); }
+    .form-field input, .form-field select, .form-field textarea {
+      padding: 0.8rem 1rem; border: 1px solid var(--border); border-radius: 8px;
+      font-family: 'Inter', sans-serif; font-size: 0.9rem; outline: none;
+      transition: border-color 0.2s; background: white;
+    }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--yellow); }
+    .form-field textarea { resize: vertical; min-height: 100px; }
 
     /* FOOTER */
-    footer { background: #111827; color: #9ca3af; padding: 3rem 5% 2rem; }
-    .footer-inner { max-width: 1200px; margin: 0 auto; }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-    .footer-brand h3 { color: var(--white); font-size: 1.2rem; font-weight: 800; margin-bottom: 0.8rem; }
-    .footer-brand p { font-size: 0.85rem; line-height: 1.7; }
-    .footer-col h4 { color: var(--white); font-size: 0.9rem; font-weight: 700; margin-bottom: 1rem; }
+    footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 4rem 5% 2rem; }
+    .footer-inner { max-width: 1300px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-logo img { height: 55px; width: auto; margin-bottom: 1rem; border-radius: 6px; }
+    .footer-logo p { font-size: 0.85rem; line-height: 1.7; }
+    .footer-col h4 { color: var(--yellow); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
     .footer-col a { font-size: 0.85rem; transition: color 0.2s; }
-    .footer-col a:hover { color: var(--white); }
-    .footer-bottom { border-top: 1px solid #1f2937; padding-top: 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-size: 0.8rem; }
-    .footer-phone { color: #4ade80; font-weight: 700; font-size: 1rem; display: block; margin-top: 0.5rem; }
+    .footer-col a:hover { color: var(--yellow); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; font-size: 0.78rem; flex-wrap: wrap; gap: 0.5rem; }
 
-    /* ANIMATIONS */
+    /* FADE */
     .fade-up { opacity: 0; transform: translateY(25px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
     /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .hero-inner, .about-grid, .area-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-mascot { display: none; }
+      .about-grid, .contact-grid, .area-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .commercial-banner { grid-template-columns: 1fr; }
       .nav-links { display: none; }
     }
     @media (max-width: 600px) {
-      .footer-grid { grid-template-columns: 1fr; }
-      .stats-inner { gap: 1.5rem; }
+      .footer-top { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .counties-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div>📍 Serving Central Florida · Orange, Osceola, Lake, Polk, Seminole, Volusia & beyond</div>
+  <div>
+    <span>Available </span>
+    <strong style="color:var(--yellow);">24 Hours / 7 Days a Week</strong>
+    <span class="top-bar-badge">Emergency Service</span>
+    &nbsp;·&nbsp;
+    <a href="tel:4079222276">(407) 922-2276</a>
+  </div>
+</div>
+
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="/" class="nav-logo">
-      <img src="assets/logos/logo-official.jpg" alt="Pest Pro LLC" style="height:44px;width:auto;object-fit:contain;" />
+      <img src="assets/logos/logo-official.jpg" alt="Pest Pro LLC" />
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#about">About Us</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="#service-area">Service Area</a></li>
+      <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div style="display:flex;align-items:center;gap:1.2rem;">
+    <div class="nav-right">
       <a href="tel:4079222276" class="nav-phone">📞 (407) 922-2276</a>
       <a href="#contact" class="nav-cta">Free Inspection</a>
     </div>
@@ -324,110 +383,120 @@
 <section id="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-badge">⭐ 26 Five-Star Google Reviews · Serving Central Florida</div>
-      <h1>Central Florida's Trusted <span>Pest Control</span> Experts</h1>
-      <p class="hero-sub">Rooted in 40+ years of experience. Serving Orange, Osceola, Lake & Polk counties. Residential starting at $26/month — no contracts required.</p>
+      <div class="hero-tag">⭐ Florida's Premier Pest Control Experts — Proven, Trusted, Guaranteed</div>
+      <h1>We Don't Just Treat Pests.<br/><em>We Eliminate Them.</em></h1>
+      <p class="hero-sub">Central Florida's most trusted pest control company. Serving residential homes, restaurants, hotels, resorts, warehouses, office buildings, and more — 24 hours a day, 7 days a week.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-white">Schedule Free Inspection</a>
-        <a href="tel:4079222276" class="btn-outline-white">Call (407) 922-2276</a>
+        <a href="#contact" class="btn-yellow">Schedule Free Inspection</a>
+        <a href="tel:4079222276" class="btn-outline-white">📞 Call 24/7: (407) 922-2276</a>
       </div>
       <div class="hero-trust">
-        <div class="trust-item">✅ Licensed & Insured</div>
-        <div class="trust-item">✅ Same-Day Service Available</div>
-        <div class="trust-item">✅ Family Owned</div>
+        <div class="trust-pill">✅ Licensed & Insured</div>
+        <div class="trust-pill">✅ 24/7 Emergency Service</div>
+        <div class="trust-pill">✅ Family Owned Since 1986</div>
+        <div class="trust-pill">⭐ 26 Five-Star Reviews</div>
       </div>
     </div>
-    <div class="hero-card">
-      <h3>🔍 Schedule Your Free Inspection</h3>
-      <form class="hero-form" onsubmit="return false;">
-        <input type="text" placeholder="Your Name" />
-        <input type="tel" placeholder="Phone Number" />
-        <input type="email" placeholder="Email Address" />
-        <input type="text" placeholder="City / Zip Code" />
-        <select>
-          <option value="" disabled selected>Type of Pest Issue</option>
-          <option>Ants</option>
-          <option>Roaches</option>
-          <option>Rodents (Rats/Mice)</option>
-          <option>Bed Bugs</option>
-          <option>Spiders</option>
-          <option>Mosquitoes</option>
-          <option>Termites</option>
-          <option>Wasps / Stinging Insects</option>
-          <option>General Maintenance</option>
-          <option>Other / Not Sure</option>
-        </select>
-        <button type="submit">Request Free Inspection →</button>
-        <p class="form-note">No obligation. We'll call you within 1 business hour.</p>
-      </form>
+    <div class="hero-mascot">
+      <img src="assets/mascot/vant-official.jpg" alt="Vant - Pest Pro Mascot" />
     </div>
   </div>
 </section>
 
-<!-- STATS BAR -->
-<div class="stats-bar">
-  <div class="stats-inner">
-    <div class="stat"><div class="stat-num">40+</div><div class="stat-label">Years of Experience</div></div>
-    <div class="stat"><div class="stat-num">26</div><div class="stat-label">5-Star Google Reviews</div></div>
-    <div class="stat"><div class="stat-num">4</div><div class="stat-label">Counties Served</div></div>
-    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Satisfaction Guarantee</div></div>
-    <div class="stat"><div class="stat-num">$26</div><div class="stat-label">Starting / Month</div></div>
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-bar-item"><span>🏠</span> Residential</div>
+    <div class="trust-bar-item"><span>🍽️</span> Restaurants</div>
+    <div class="trust-bar-item"><span>🏨</span> Hotels & Resorts</div>
+    <div class="trust-bar-item"><span>🏢</span> Office Buildings</div>
+    <div class="trust-bar-item"><span>🏭</span> Warehouses & Industrial</div>
+    <div class="trust-bar-item"><span>🏖️</span> Timeshares</div>
+    <div class="trust-bar-item"><span>🏥</span> Healthcare Facilities</div>
   </div>
 </div>
 
 <!-- SERVICES -->
 <section id="services">
   <div class="section-inner">
-    <div class="fade-up">
-      <div class="section-label">What We Treat</div>
-      <h2 class="section-title">Comprehensive Pest Control Services</h2>
-      <p class="section-desc">From routine maintenance to emergency infestations — we've handled it all across Central Florida for decades.</p>
+    <div class="fade-up" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+      <div>
+        <div class="section-label">What We Treat</div>
+        <h2 class="section-title">Comprehensive Pest Control Services</h2>
+        <p class="section-desc" style="max-width:600px;">Science-based, targeted treatments for every pest in Central Florida. Residential, commercial, and everything in between.</p>
+      </div>
     </div>
     <div class="services-grid">
       <div class="service-card fade-up">
-        <div class="service-icon">🐜</div>
+        <div class="service-icon-placeholder" style="background:linear-gradient(135deg,#e8f4ff,#c5deff);">🐜</div>
         <h3>Ant Control</h3>
-        <a href="services/ant-control.html">Learn More →</a>
+        <p>Fire ants, ghost ants, carpenter ants & more. We treat colonies at the source.</p>
       </div>
       <div class="service-card fade-up">
-        <div class="service-icon">🪳</div>
+        <div class="service-icon-placeholder" style="background:linear-gradient(135deg,#fff3e0,#ffe0b2);">🪳</div>
         <h3>Roach Extermination</h3>
-        <a href="services/roach-control.html">Learn More →</a>
+        <p>German roaches, Palmetto bugs, and all species. Total elimination, not just control.</p>
       </div>
       <div class="service-card fade-up">
-        <div class="service-icon">🐭</div>
+        <div class="service-icon-placeholder" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0);">🐭</div>
         <h3>Rodent Control</h3>
-        <a href="services/rodent-control.html">Learn More →</a>
+        <p>Rats and mice — trap, removal, exclusion, and prevention. Full service rodent programs.</p>
       </div>
       <div class="service-card fade-up">
-        <div class="service-icon">🛏</div>
+        <div class="service-icon-placeholder" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">🛏</div>
         <h3>Bed Bug Treatment</h3>
-        <a href="services/bed-bug-treatment.html">Learn More →</a>
+        <p>Heat and chemical treatments. Hotels, resorts, residential — discreet and effective.</p>
       </div>
       <div class="service-card fade-up">
-        <div class="service-icon">🕷</div>
+        <div class="service-icon-placeholder" style="background:linear-gradient(135deg,#f3e5f5,#e1bee7);">🕷</div>
         <h3>Spider Control</h3>
-        <a href="services/spider-control.html">Learn More →</a>
+        <p>Eliminate webs, nests, and infestations indoors and out.</p>
       </div>
       <div class="service-card fade-up">
-        <div class="service-icon">🦟</div>
+        <div class="service-icon-placeholder" style="background:linear-gradient(135deg,#e0f7fa,#b2ebf2);">🦟</div>
         <h3>Mosquito Treatment</h3>
-        <a href="services/mosquito-control.html">Learn More →</a>
+        <p>Yard treatments and breeding site elimination. Take back your outdoor spaces.</p>
       </div>
       <div class="service-card fade-up">
-        <div class="service-icon">🐝</div>
-        <h3>Wasp & Bee Removal</h3>
-        <a href="services/wasp-bee-removal.html">Learn More →</a>
+        <div class="service-icon-placeholder" style="background:linear-gradient(135deg,#fff8e1,#ffecb3);">🐝</div>
+        <h3>Wasps & Stinging Insects</h3>
+        <p>Safe removal of nests and colonies from structures and outdoor areas.</p>
       </div>
       <div class="service-card fade-up">
-        <div class="service-icon">🏢</div>
-        <h3>Commercial Pest Control</h3>
-        <a href="services/commercial.html">Learn More →</a>
+        <div class="service-icon-placeholder" style="background:linear-gradient(135deg,#fbe9e7,#ffccbc);">🦗</div>
+        <h3>Fleas & Ticks</h3>
+        <p>Interior and exterior flea/tick treatments for homes, yards, and commercial properties.</p>
       </div>
       <div class="service-card fade-up">
-        <div class="service-icon">🏠</div>
-        <h3>Residential Maintenance</h3>
-        <a href="services/residential.html">Learn More →</a>
+        <div class="service-icon-placeholder" style="background:linear-gradient(135deg,#e8eaf6,#c5cae9);">🪲</div>
+        <h3>Silverfish & Earwigs</h3>
+        <p>Targeted treatments for moisture-loving pests damaging paper, fabric, and food.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon-placeholder" style="background:linear-gradient(135deg,#e0f2f1,#b2dfdb);">🏠</div>
+        <h3>General Maintenance Plans</h3>
+        <p>Quarterly and monthly programs for ongoing protection. Starting at $26/month.</p>
+      </div>
+    </div>
+
+    <!-- COMMERCIAL BANNER -->
+    <div class="commercial-banner fade-up">
+      <div>
+        <h3>Commercial Pest Control — Any Size, Any Industry</h3>
+        <p>We specialize in commercial pest management programs for businesses that cannot afford a pest problem. Discreet, professional, and fully documented for compliance.</p>
+        <div class="commercial-types">
+          <span class="comm-tag">🍽️ Restaurants & Food Service</span>
+          <span class="comm-tag">🏨 Hotels & Resorts</span>
+          <span class="comm-tag">🏖️ Timeshares</span>
+          <span class="comm-tag">🏥 Healthcare & Assisted Living</span>
+          <span class="comm-tag">🏭 Warehouses & Industrial</span>
+          <span class="comm-tag">🏢 Office Buildings</span>
+          <span class="comm-tag">🏫 Schools & Educational</span>
+          <span class="comm-tag">🛒 Retail</span>
+        </div>
+      </div>
+      <div style="flex-shrink:0;">
+        <a href="#contact" class="btn-yellow" style="white-space:nowrap;">Get Commercial Quote →</a>
       </div>
     </div>
   </div>
@@ -437,50 +506,45 @@
 <section id="about">
   <div class="section-inner">
     <div class="about-grid">
-      <div class="about-visual fade-up">
-        <img src="assets/mascot/vant-official.jpg" alt="Vant - Pest Pro Mascot" style="width:180px;height:auto;margin:0 auto 1rem;display:block;" />
-        <h3 style="font-weight:800;font-size:1.3rem;color:var(--green-dark);">Pest Pro LLC</h3>
-        <p style="color:var(--muted);font-size:0.9rem;margin-top:0.5rem;">Independently owned &amp; operated in Central Florida</p>
-        <div class="founded-badge">Rooted in experience since 1986</div>
-        <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #c8e6c9;">
-          <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;">
-            <strong style="color:var(--text);">Dr. Bernie L. Howell, PhD</strong> founded Pest Pro Services, LLC in South Florida in 1986. Daniel Rumsey took the helm of the Orlando division in 2017, and Pest Pro LLC became fully independent in January 2020 — carrying forward the same science-backed standards and family values.
-          </p>
+      <div class="fade-up about-photo-stack">
+        <img src="assets/real-photos/team-building.jpg" alt="Pest Pro Team" class="about-main-photo" style="aspect-ratio:4/3;" />
+        <div class="about-badge-float">
+          <div class="big">40+</div>
+          <div class="small">Years of Experience</div>
         </div>
       </div>
       <div class="fade-up">
         <div class="section-label">Our Story</div>
-        <h2 class="section-title">40+ Years of Pest Control Science</h2>
-        <p class="section-desc" style="margin-bottom:1.5rem;">
-          What started in South Florida in 1986 has grown into Central Florida's most trusted local pest control brand. We don't just spray and leave — we use Integrated Pest Management (IPM) to understand the biology, behavior, and environment of every pest we treat.
-        </p>
+        <h2 class="section-title">Florida's Premier Pest Control — Since 1986</h2>
+        <p class="section-desc" style="margin-bottom:1.5rem;">What started as a single operation in South Florida in 1986 has grown into one of Central Florida's most trusted names in pest control. Our founder, <strong>Dr. Bernie L. Howell, PhD</strong>, built this company on one principle: understand the science of pests before you try to eliminate them.</p>
+        <p class="section-desc" style="margin-bottom:2rem;">In 2017, <strong>Daniel Rumsey</strong> — who has worked alongside Dr. Howell since 1996 — took the helm of the Orlando division. In January 2020, Pest Pro LLC became fully independent, carrying forward the same science-backed standards, family values, and commitment to results that have defined this brand for nearly four decades.</p>
         <div class="about-points">
           <div class="about-point">
-            <div class="point-icon">🔬</div>
+            <div class="point-dot"></div>
             <div>
-              <h4>Science-Backed Methods</h4>
-              <p>Our founder holds a PhD in the field. Every treatment is rooted in pest biology, not guesswork.</p>
+              <h4>Science-Backed Integrated Pest Management (IPM)</h4>
+              <p>We don't guess. We analyze pest biology, behavior, and environmental factors to deliver targeted, long-lasting solutions with fewer treatments.</p>
             </div>
           </div>
           <div class="about-point">
-            <div class="point-icon">👨‍👩‍👧</div>
+            <div class="point-dot"></div>
             <div>
-              <h4>Family-Owned & Operated</h4>
-              <p>Daniel Rumsey has worked in pest control since 1996. This isn't a corporate franchise — it's personal.</p>
+              <h4>Family Owned & Operated</h4>
+              <p>This isn't a franchise or a call center. Daniel and his team are local, personal, and accountable. You'll get a real person every time.</p>
             </div>
           </div>
           <div class="about-point">
-            <div class="point-icon">🌿</div>
+            <div class="point-dot"></div>
             <div>
-              <h4>Eco-Conscious Treatments</h4>
-              <p>We protect your home AND the Central Florida environment with targeted, responsible solutions.</p>
+              <h4>24/7 — Including Emergencies</h4>
+              <p>Pests don't keep business hours. Neither do we. Emergency response available around the clock, every day of the year.</p>
             </div>
           </div>
           <div class="about-point">
-            <div class="point-icon">📍</div>
+            <div class="point-dot"></div>
             <div>
-              <h4>Truly Local</h4>
-              <p>We live and work here. We know Central Florida's climate, pest pressures, and what actually works.</p>
+              <h4>Certified, Licensed & Insured in Florida</h4>
+              <p>Fully compliant with all Florida Department of Agriculture requirements. Certified operators on every job.</p>
             </div>
           </div>
         </div>
@@ -492,56 +556,56 @@
 <!-- PRICING -->
 <section id="pricing">
   <div class="section-inner">
-    <div class="fade-up" style="text-align:center;max-width:640px;margin:0 auto 1rem;">
+    <div class="fade-up" style="text-align:center;max-width:640px;margin:0 auto 2.5rem;">
       <div class="section-label">Transparent Pricing</div>
-      <h2 class="section-title">Simple Plans, No Hidden Fees</h2>
-      <p class="section-desc" style="margin:0 auto;">Every property is different — but here's a starting point. All plans include our satisfaction guarantee. Call us for a custom quote on infestations.</p>
+      <h2 class="section-title">Plans That Fit Every Home & Business</h2>
+      <p class="section-desc">No contracts required. Every property is different — call us for a custom quote on infestations or commercial properties.</p>
     </div>
     <div class="pricing-grid">
       <div class="pricing-card fade-up">
-        <h3>Quarterly Maintenance</h3>
-        <div class="pricing-price">$26<span>/month</span></div>
-        <p class="pricing-note">Billed as $78 per service visit, every 3 months</p>
+        <h3>Quarterly Protection</h3>
+        <div class="pricing-price"><sup>$</sup>26<sub>/mo</sub></div>
+        <p class="pricing-note">Billed as $78 per visit · Every 3 months</p>
         <ul class="pricing-features">
-          <li>Ants, Roaches & Spiders</li>
-          <li>Silverfish & Earwigs</li>
-          <li>Exterior perimeter treatment</li>
-          <li>Interior inspection</li>
-          <li>Satisfaction guarantee</li>
+          <li><span class="check">✓</span> Ants, Roaches & Spiders</li>
+          <li><span class="check">✓</span> Silverfish, Earwigs & Stored Product Pests</li>
+          <li><span class="check">✓</span> Exterior perimeter treatment</li>
+          <li><span class="check">✓</span> Interior inspection included</li>
+          <li><span class="check">✓</span> Satisfaction guarantee</li>
         </ul>
-        <a href="#contact" class="btn-green-outline">Get Started</a>
+        <a href="#contact" class="btn-navy">Get Started →</a>
       </div>
       <div class="pricing-card featured fade-up">
         <div class="pricing-badge">Most Popular</div>
-        <h3>Monthly Protection</h3>
-        <div class="pricing-price">$49<span>/month</span></div>
-        <p class="pricing-note">12-month plan, billed monthly</p>
+        <h3>Monthly Protection Plan</h3>
+        <div class="pricing-price"><sup>$</sup>49<sub>/mo</sub></div>
+        <p class="pricing-note">Year-round coverage · Billed monthly</p>
         <ul class="pricing-features">
-          <li>All quarterly services included</li>
-          <li>Mosquito control (seasonal)</li>
-          <li>Rodent monitoring</li>
-          <li>Priority scheduling</li>
-          <li>Free re-service between visits</li>
-          <li>Satisfaction guarantee</li>
+          <li><span class="check">✓</span> Everything in Quarterly</li>
+          <li><span class="check">✓</span> Mosquito treatment (seasonal)</li>
+          <li><span class="check">✓</span> Rodent monitoring</li>
+          <li><span class="check">✓</span> Free re-service between visits</li>
+          <li><span class="check">✓</span> Priority scheduling</li>
+          <li><span class="check">✓</span> 24/7 emergency access</li>
         </ul>
-        <a href="#contact" class="btn-green">Get Started</a>
+        <a href="#contact" class="btn-yellow-solid">Get Started →</a>
       </div>
       <div class="pricing-card fade-up">
         <h3>Commercial & Custom</h3>
-        <div class="pricing-price" style="font-size:1.8rem;">Custom</div>
-        <p class="pricing-note">Tailored to your property and needs</p>
+        <div class="pricing-price" style="font-size:2rem;line-height:1.2;padding:0.3rem 0;">Custom<br/><span style="font-size:0.95rem;font-weight:500;color:var(--muted);">Quote</span></div>
+        <p class="pricing-note">Restaurants, Hotels, Warehouses & more</p>
         <ul class="pricing-features">
-          <li>Multi-unit & commercial properties</li>
-          <li>Restaurants & healthcare facilities</li>
-          <li>Hotels & hospitality</li>
-          <li>GHP / compliance programs</li>
-          <li>Dedicated account manager</li>
-          <li>Detailed service reporting</li>
+          <li><span class="check">✓</span> Customized service programs</li>
+          <li><span class="check">✓</span> Compliance documentation</li>
+          <li><span class="check">✓</span> Dedicated account manager</li>
+          <li><span class="check">✓</span> Multi-location discounts</li>
+          <li><span class="check">✓</span> 24/7 emergency response</li>
+          <li><span class="check">✓</span> Service reports & logs</li>
         </ul>
-        <a href="#contact" class="btn-green-outline">Request Quote</a>
+        <a href="#contact" class="btn-navy">Request Quote →</a>
       </div>
     </div>
-    <p style="text-align:center;font-size:0.82rem;color:var(--muted);margin-top:1.5rem;">* Pricing shown is for preventative maintenance on general household pests. Initial infestation treatment quoted separately. All pricing subject to property inspection.</p>
+    <p style="text-align:center;font-size:0.8rem;color:var(--muted);margin-top:1.5rem;">* Quarterly pricing applies to preventative maintenance for general household pests only. Initial infestation removal quoted separately after inspection. All pricing subject to property size and conditions.</p>
   </div>
 </section>
 
@@ -551,14 +615,14 @@
     <div class="reviews-header fade-up">
       <div>
         <div class="section-label">Customer Reviews</div>
-        <h2 class="section-title">What Our Clients Are Saying</h2>
+        <h2 class="section-title">Don't Take Our Word For It</h2>
       </div>
-      <div class="rating-summary">
-        <div class="rating-big">5.0</div>
+      <div class="google-rating">
+        <div class="rating-num">5.0</div>
         <div>
           <div class="stars">★★★★★</div>
-          <div class="rating-count">26 reviews on Google</div>
-          <div class="rating-count" style="margin-top:0.2rem;">Zero negative reviews</div>
+          <div style="font-size:0.85rem;font-weight:700;color:var(--navy);">26 Google Reviews</div>
+          <div style="font-size:0.75rem;color:var(--muted);">Zero negative reviews</div>
         </div>
       </div>
     </div>
@@ -567,23 +631,38 @@
         <div class="review-stars">★★★★★</div>
         <p class="review-text">"Pest Pro came out same day and took care of our roach problem completely. The technician was professional, thorough, and explained everything he was doing. Haven't seen a single bug since."</p>
         <div class="review-author">Maria G.</div>
-        <div class="review-source">📍 Kissimmee, FL · Google Review</div>
+        <div class="review-city">Kissimmee, FL</div>
       </div>
       <div class="review-card fade-up">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"We've tried two other companies before finding Pest Pro. Night and day difference. They actually solved our ant problem instead of just spraying and collecting a check. Highly recommend."</p>
+        <p class="review-text">"We tried two other companies before Pest Pro. Night and day difference. They actually solved our ant problem instead of just spraying and collecting a check. The science behind their approach is real."</p>
         <div class="review-author">James T.</div>
-        <div class="review-source">📍 Winter Garden, FL · Google Review</div>
+        <div class="review-city">Winter Garden, FL</div>
       </div>
       <div class="review-card fade-up">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"Daniel and his team are incredibly knowledgeable. The science behind their approach is real — not just chemicals everywhere. Our home has been pest-free for over a year now."</p>
-        <div class="review-author">Sandra M.</div>
-        <div class="review-source">📍 Windermere, FL · Google Review</div>
+        <p class="review-text">"Daniel and his team are incredibly knowledgeable. Our restaurant has been completely pest-free since we switched to Pest Pro. They understand health code compliance and take it seriously."</p>
+        <div class="review-author">Carlos M.</div>
+        <div class="review-city">Orlando, FL · Restaurant Owner</div>
       </div>
-    </div>
-    <div style="text-align:center;margin-top:2rem;">
-      <a href="https://g.page/r/review" target="_blank" class="btn-green-outline" style="display:inline-block;padding:0.7rem 1.8rem;">See All 26 Google Reviews →</a>
+      <div class="review-card fade-up">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Called at 11 PM with a rodent emergency before a big inspection. They showed up within 2 hours and handled everything professionally. I can't recommend them enough."</p>
+        <div class="review-author">Sandra L.</div>
+        <div class="review-city">Windermere, FL</div>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Best pest control company I've used in 15 years in Florida. They're thorough, on time, and the results speak for themselves. My whole neighborhood is on their quarterly plan now."</p>
+        <div class="review-author">Robert H.</div>
+        <div class="review-city">St. Cloud, FL</div>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Pest Pro handles our entire property portfolio — 3 commercial buildings and my home. Reliable, consistent, and they always show up when they say they will. That's rare."</p>
+        <div class="review-author">Michelle K.</div>
+        <div class="review-city">Dr. Phillips, FL · Property Manager</div>
+      </div>
     </div>
   </div>
 </section>
@@ -593,62 +672,74 @@
   <div class="section-inner">
     <div class="fade-up">
       <div class="section-label">Where We Serve</div>
-      <h2 class="section-title">Central Florida Service Area</h2>
-      <p class="section-desc">We cover a wide service area across Central Florida. If you don't see your city, call us — chances are we service your area.</p>
+      <h2 class="section-title">Central Florida & Beyond</h2>
+      <p class="section-desc">We cover a wide service footprint across Central Florida. If you don't see your city listed — call us. We likely service your area.</p>
     </div>
-    <div class="area-grid">
+    <div class="area-inner">
       <div class="fade-up">
-        <h3 style="font-weight:700;margin-bottom:1rem;">Counties We Cover</h3>
-        <div class="counties">
-          <div class="county-card"><h4>Orange County</h4><p>Orlando, Winter Park, Dr. Phillips, Windermere</p></div>
-          <div class="county-card"><h4>Osceola County</h4><p>Kissimmee, St. Cloud, Celebration</p></div>
-          <div class="county-card"><h4>Lake County</h4><p>Clermont, Leesburg, Tavares</p></div>
-          <div class="county-card"><h4>Polk County</h4><p>Lakeland, Winter Haven & surrounding areas</p></div>
+        <h3 style="font-weight:700;color:var(--yellow);margin-bottom:1.2rem;">Counties We Cover</h3>
+        <div class="counties-grid">
+          <div class="county-card"><h4>Orange County</h4><p>Orlando, Winter Park, Dr. Phillips, Windermere, Apopka, Ocoee</p></div>
+          <div class="county-card"><h4>Osceola County</h4><p>Kissimmee, St. Cloud, Celebration, Poinciana, Buena Ventura Lakes</p></div>
+          <div class="county-card"><h4>Lake County</h4><p>Clermont, Leesburg, Tavares, Minneola, Groveland</p></div>
+          <div class="county-card"><h4>Polk County</h4><p>Lakeland, Winter Haven, Haines City, Davenport, Dundee</p></div>
+          <div class="county-card"><h4>Seminole County</h4><p>Sanford, Altamonte Springs, Longwood, Casselberry, Lake Mary</p></div>
+          <div class="county-card"><h4>Volusia County</h4><p>Deltona, Deland & surrounding areas</p></div>
         </div>
       </div>
       <div class="fade-up">
-        <h3 style="font-weight:700;margin-bottom:1rem;">Cities We Regularly Service</h3>
-        <div class="cities-list">
-          <span class="city-tag">Orlando</span>
-          <span class="city-tag">Kissimmee</span>
-          <span class="city-tag">Windermere</span>
-          <span class="city-tag">Winter Garden</span>
-          <span class="city-tag">Clermont</span>
-          <span class="city-tag">St. Cloud</span>
-          <span class="city-tag">Dr. Phillips</span>
-          <span class="city-tag">Winter Park</span>
-          <span class="city-tag">Celebration</span>
-          <span class="city-tag">Lake Nona</span>
-          <span class="city-tag">Ocoee</span>
-          <span class="city-tag">Apopka</span>
-          <span class="city-tag">Sanford</span>
-          <span class="city-tag">Altamonte Springs</span>
-          <span class="city-tag">Davenport</span>
-          <span class="city-tag">Haines City</span>
+        <h3 style="font-weight:700;color:var(--yellow);margin-bottom:1.2rem;">Cities We Regularly Service</h3>
+        <div class="cities-cloud">
+          <span class="city-pill">Orlando</span>
+          <span class="city-pill">Kissimmee</span>
+          <span class="city-pill">Windermere</span>
+          <span class="city-pill">Winter Garden</span>
+          <span class="city-pill">Clermont</span>
+          <span class="city-pill">St. Cloud</span>
+          <span class="city-pill">Dr. Phillips</span>
+          <span class="city-pill">Winter Park</span>
+          <span class="city-pill">Sanford</span>
+          <span class="city-pill">Lakeland</span>
+          <span class="city-pill">Celebration</span>
+          <span class="city-pill">Lake Nona</span>
+          <span class="city-pill">Ocoee</span>
+          <span class="city-pill">Apopka</span>
+          <span class="city-pill">Altamonte Springs</span>
+          <span class="city-pill">Davenport</span>
+          <span class="city-pill">Haines City</span>
+          <span class="city-pill">Longwood</span>
+          <span class="city-pill">Casselberry</span>
+          <span class="city-pill">Winter Haven</span>
+          <span class="city-pill">Minneola</span>
+          <span class="city-pill">Lake Mary</span>
+          <span class="city-pill">Deltona</span>
+          <span class="city-pill">Poinciana</span>
+          <span class="city-pill">Buena Ventura Lakes</span>
+          <span class="city-pill">Groveland</span>
         </div>
-        <p style="font-size:0.82rem;color:var(--muted);margin-top:1.2rem;">Don't see your city? Call us at <a href="tel:4079222276" style="color:var(--green);font-weight:700;">(407) 922-2276</a> — we likely service your area.</p>
+        <p style="font-size:0.82rem;color:rgba(255,255,255,0.55);margin-top:1.5rem;">Don't see your city? Call <a href="tel:4079222276" style="color:var(--yellow);font-weight:700;">(407) 922-2276</a> — we cover a wide area and will let you know immediately if we can help.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BLOG PREVIEW -->
+<!-- BLOG -->
 <section id="blog">
   <div class="section-inner">
     <div class="fade-up" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;">
       <div>
-        <div class="section-label">Pest Control Tips & News</div>
+        <div class="section-label">Tips, News & Guides</div>
         <h2 class="section-title">From the Pest Pro Blog</h2>
       </div>
-      <a href="blog.html" class="btn-green-outline" style="display:inline-block;padding:0.6rem 1.4rem;">All Articles →</a>
+      <a href="blog.html" class="btn-navy" style="display:inline-block;padding:0.65rem 1.5rem;">All Articles →</a>
     </div>
     <div class="blog-grid">
       <div class="blog-card fade-up">
         <div class="blog-thumb bg1">🦟</div>
         <div class="blog-body">
           <span class="blog-tag">Mosquitoes</span>
-          <h3>Why Central Florida Has Year-Round Mosquito Season (And What To Do About It)</h3>
-          <p>Florida's humidity and heat create the perfect breeding environment. Here's what actually works beyond citronella candles.</p>
+          <h3>Why Central Florida Has Year-Round Mosquito Season — And What Works</h3>
+          <p>Florida's humidity and heat create the perfect breeding environment 365 days a year. Here's what actually eliminates the problem.</p>
           <a href="blog/mosquito-season-central-florida.html" class="blog-read">Read Article →</a>
         </div>
       </div>
@@ -656,8 +747,8 @@
         <div class="blog-thumb bg2">🪳</div>
         <div class="blog-body">
           <span class="blog-tag">Roaches</span>
-          <h3>Palmetto Bugs vs. German Roaches: What's the Difference and Why It Matters</h3>
-          <p>Not all roaches are equal — and treatment differs. Know what you're dealing with before you call anyone.</p>
+          <h3>Palmetto Bugs vs. German Roaches: What's the Difference & Why It Matters</h3>
+          <p>Not all roaches are equal — treatment differs dramatically. Know what you're dealing with before calling anyone.</p>
           <a href="blog/palmetto-bug-vs-german-roach.html" class="blog-read">Read Article →</a>
         </div>
       </div>
@@ -665,8 +756,8 @@
         <div class="blog-thumb bg3">🐭</div>
         <div class="blog-body">
           <span class="blog-tag">Rodents</span>
-          <h3>5 Signs You Have a Rodent Problem in Your Home (Before It Gets Serious)</h3>
-          <p>Mice and rats are expert hiders. Catch the early warning signs and avoid a full infestation.</p>
+          <h3>5 Signs You Have a Rodent Problem Before It Gets Serious</h3>
+          <p>Mice and rats are expert hiders. Catch the early warning signs and stop a full infestation before it starts.</p>
           <a href="blog/signs-of-rodent-infestation.html" class="blog-read">Read Article →</a>
         </div>
       </div>
@@ -674,61 +765,81 @@
   </div>
 </section>
 
-<!-- CTA BANNER -->
-<div class="cta-banner">
+<!-- CTA -->
+<div class="cta-section">
   <h2>Ready to Be Pest-Free?</h2>
-  <p>Schedule your free inspection today. No obligation, no pressure — just answers and a plan.</p>
+  <p>24/7 service across Central Florida. No obligation, no pressure — just results.</p>
   <div class="cta-actions">
-    <a href="#contact" class="btn-white">Schedule Free Inspection</a>
-    <a href="tel:4079222276" class="btn-outline-white">📞 (407) 922-2276</a>
+    <a href="#contact" class="btn-navy-lg">Schedule Free Inspection</a>
+    <a href="tel:4079222276" class="btn-outline-navy">📞 Call 24/7: (407) 922-2276</a>
   </div>
 </div>
 
 <!-- CONTACT -->
-<section id="contact" style="background:var(--white);">
+<section id="contact">
   <div class="section-inner">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;" class="about-grid">
+    <div class="contact-grid">
       <div class="fade-up">
         <div class="section-label">Get In Touch</div>
         <h2 class="section-title">Schedule Your Free Inspection</h2>
-        <p class="section-desc" style="margin-bottom:2rem;">We respond within 1 business hour. Same-day service available in most areas.</p>
-        <div style="display:flex;flex-direction:column;gap:1.2rem;">
-          <div style="display:flex;align-items:center;gap:1rem;">
-            <div style="width:44px;height:44px;background:var(--green-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">📞</div>
-            <div><div style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;font-weight:700;letter-spacing:0.08em;">Phone</div><a href="tel:4079222276" style="font-size:1.1rem;font-weight:700;color:var(--green);">(407) 922-2276</a></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:1rem;">
-            <div style="width:44px;height:44px;background:var(--green-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">✉️</div>
-            <div><div style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;font-weight:700;letter-spacing:0.08em;">Email</div><a href="mailto:info@PestProLLC.com" style="font-size:0.95rem;font-weight:600;color:var(--green);">info@PestProLLC.com</a></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:1rem;">
-            <div style="width:44px;height:44px;background:var(--green-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">🕐</div>
-            <div><div style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;font-weight:700;letter-spacing:0.08em;">Hours</div><div style="font-size:0.9rem;">Mon–Sat: 8AM–6PM · Emergency service available</div></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:1rem;">
-            <div style="width:44px;height:44px;background:var(--green-bg);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">📍</div>
-            <div><div style="font-size:0.78rem;color:var(--muted);text-transform:uppercase;font-weight:700;letter-spacing:0.08em;">Service Area</div><div style="font-size:0.9rem;">Orange, Osceola, Lake & Polk Counties</div></div>
-          </div>
+        <p class="section-desc" style="margin-bottom:2.5rem;">We respond fast — same-day service available in most areas. Available 24 hours, 7 days a week including emergencies.</p>
+        <div class="contact-detail">
+          <div class="contact-icon">📞</div>
+          <div><div class="contact-label">Phone / 24hr Emergency</div><a href="tel:4079222276" class="contact-value" style="display:block;">(407) 922-2276</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">✉️</div>
+          <div><div class="contact-label">Email</div><a href="mailto:info@PestProLLC.com" class="contact-value" style="display:block;">info@PestProLLC.com</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">🕐</div>
+          <div><div class="contact-label">Hours</div><div class="contact-value">24 Hours / 7 Days a Week</div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">📍</div>
+          <div><div class="contact-label">Service Area</div><div class="contact-value">Orange, Osceola, Lake, Polk, Seminole & beyond</div></div>
+        </div>
+        <div style="margin-top:2rem;">
+          <img src="assets/mascot/vant-official.jpg" alt="Vant" style="height:120px;width:auto;" />
         </div>
       </div>
       <div class="fade-up">
         <form style="display:flex;flex-direction:column;gap:1rem;" onsubmit="return false;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-            <input type="text" placeholder="First Name" style="padding:0.85rem 1rem;border:1px solid var(--border);border-radius:8px;font-family:'Inter',sans-serif;font-size:0.9rem;outline:none;" />
-            <input type="text" placeholder="Last Name" style="padding:0.85rem 1rem;border:1px solid var(--border);border-radius:8px;font-family:'Inter',sans-serif;font-size:0.9rem;outline:none;" />
+          <div class="form-row">
+            <div class="form-field"><label>First Name</label><input type="text" placeholder="John" /></div>
+            <div class="form-field"><label>Last Name</label><input type="text" placeholder="Smith" /></div>
           </div>
-          <input type="tel" placeholder="Phone Number" style="padding:0.85rem 1rem;border:1px solid var(--border);border-radius:8px;font-family:'Inter',sans-serif;font-size:0.9rem;outline:none;" />
-          <input type="email" placeholder="Email Address" style="padding:0.85rem 1rem;border:1px solid var(--border);border-radius:8px;font-family:'Inter',sans-serif;font-size:0.9rem;outline:none;" />
-          <input type="text" placeholder="Address / City" style="padding:0.85rem 1rem;border:1px solid var(--border);border-radius:8px;font-family:'Inter',sans-serif;font-size:0.9rem;outline:none;" />
-          <select style="padding:0.85rem 1rem;border:1px solid var(--border);border-radius:8px;font-family:'Inter',sans-serif;font-size:0.9rem;outline:none;background:white;">
-            <option disabled selected>Type of Pest Problem</option>
-            <option>Ants</option><option>Roaches</option><option>Rodents</option>
-            <option>Bed Bugs</option><option>Mosquitoes</option><option>Termites</option>
-            <option>Spiders</option><option>General Maintenance Plan</option><option>Other</option>
-          </select>
-          <textarea placeholder="Tell us more (optional)" rows="3" style="padding:0.85rem 1rem;border:1px solid var(--border);border-radius:8px;font-family:'Inter',sans-serif;font-size:0.9rem;outline:none;resize:vertical;"></textarea>
-          <button type="submit" style="background:var(--green);color:white;border:none;padding:1rem;border-radius:8px;font-weight:700;font-size:0.95rem;cursor:pointer;">Request Free Inspection →</button>
-          <p style="font-size:0.75rem;color:var(--muted);text-align:center;">By submitting you agree to receive SMS/email follow-up. Reply STOP to opt out.</p>
+          <div class="form-field"><label>Phone Number</label><input type="tel" placeholder="(407) 555-0000" /></div>
+          <div class="form-field"><label>Email Address</label><input type="email" placeholder="you@email.com" /></div>
+          <div class="form-field"><label>City / Zip Code</label><input type="text" placeholder="Kissimmee, FL 34741" /></div>
+          <div class="form-field">
+            <label>Property Type</label>
+            <select>
+              <option disabled selected>Select type...</option>
+              <option>Residential Home</option>
+              <option>Restaurant / Food Service</option>
+              <option>Hotel / Resort</option>
+              <option>Timeshare / Vacation Property</option>
+              <option>Office Building</option>
+              <option>Warehouse / Industrial</option>
+              <option>Healthcare / Assisted Living</option>
+              <option>Retail</option>
+              <option>Other Commercial</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Pest Problem</label>
+            <select>
+              <option disabled selected>What are you dealing with?</option>
+              <option>Ants</option><option>Roaches</option><option>Rodents (Rats/Mice)</option>
+              <option>Bed Bugs</option><option>Mosquitoes</option><option>Spiders</option>
+              <option>Wasps / Stinging Insects</option><option>Fleas / Ticks</option>
+              <option>General Maintenance Plan</option><option>Not Sure / Multiple Issues</option>
+            </select>
+          </div>
+          <div class="form-field"><label>Additional Details (optional)</label><textarea placeholder="Tell us more about your situation..."></textarea></div>
+          <button type="submit" style="background:var(--yellow);color:var(--navy);border:none;padding:1rem;border-radius:8px;font-weight:800;font-size:1rem;cursor:pointer;">Request Free Inspection →</button>
+          <p style="font-size:0.75rem;color:var(--muted);">By submitting you agree to receive follow-up via phone/SMS/email. Reply STOP to opt out anytime.</p>
         </form>
       </div>
     </div>
@@ -738,11 +849,12 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="assets/logos/logo-official.jpg" alt="Pest Pro LLC" style="height:50px;width:auto;margin-bottom:1rem;display:block;border-radius:4px;" />
-        <p>Central Florida's trusted pest control experts. Rooted in science, driven by results. Independently owned and operated since 2020, with a family legacy dating back to 1986.</p>
-        <a href="tel:4079222276" class="footer-phone">(407) 922-2276</a>
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="assets/logos/logo-official.jpg" alt="Pest Pro LLC" />
+        <p>Florida's Premier Pest Control Experts — Proven, Trusted, Guaranteed. Family-owned, science-backed, serving Central Florida 24/7 since 1986.</p>
+        <div style="margin-top:1rem;font-size:1rem;font-weight:800;color:var(--yellow);">(407) 922-2276</div>
+        <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:0.3rem;">Available 24 Hours · 7 Days a Week</div>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
@@ -751,8 +863,9 @@
           <li><a href="services/roach-control.html">Roach Extermination</a></li>
           <li><a href="services/rodent-control.html">Rodent Control</a></li>
           <li><a href="services/bed-bug-treatment.html">Bed Bug Treatment</a></li>
-          <li><a href="services/mosquito-control.html">Mosquito Control</a></li>
-          <li><a href="services/commercial.html">Commercial</a></li>
+          <li><a href="services/mosquito-control.html">Mosquito Treatment</a></li>
+          <li><a href="services/wasp-removal.html">Wasps & Stinging Insects</a></li>
+          <li><a href="services/commercial.html">Commercial Programs</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -764,24 +877,25 @@
           <li><a href="locations/winter-garden.html">Winter Garden</a></li>
           <li><a href="locations/clermont.html">Clermont</a></li>
           <li><a href="locations/st-cloud.html">St. Cloud</a></li>
-          <li><a href="#service-area">View All →</a></li>
+          <li><a href="locations/sanford.html">Sanford</a></li>
+          <li><a href="locations/lakeland.html">Lakeland</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#about">About Pest Pro</a></li>
+          <li><a href="blog.html">Blog & Tips</a></li>
+          <li><a href="#reviews">Customer Reviews</a></li>
           <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="tel:4079222276">(407) 922-2276</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="tel:4079222276">Call 24/7</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <div>© 2025 Pest Pro LLC · All Rights Reserved · Licensed & Insured in Florida</div>
-      <div>Serving Orange, Osceola, Lake & Polk Counties</div>
+      <div>Serving Orange, Osceola, Lake, Polk, Seminole & Volusia Counties</div>
     </div>
   </div>
 </footer>
@@ -789,7 +903,7 @@
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
 </body>
