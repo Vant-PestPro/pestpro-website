@@ -50,9 +50,10 @@
     .nav-inner {
       max-width: 1300px; margin: 0 auto;
       display: flex; align-items: center; justify-content: space-between;
-      height: 80px; gap: 1rem;
+      height: 90px; gap: 1rem;
     }
-    .nav-logo img { height: 60px; width: auto; }
+    .nav-logo img { height: 72px; width: auto; }
+    @media (max-width: 600px) { .nav-logo img { height: 54px; } }
     .nav-links { display: flex; gap: 0.1rem; list-style: none; }
     .nav-links a {
       padding: 0.5rem 0.75rem; font-size: 0.85rem; font-weight: 600;
@@ -328,6 +329,18 @@
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
     /* RESPONSIVE */
+    /* MOBILE NAV */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 0.5rem; }
+    .hamburger span { width: 26px; height: 2px; background: var(--navy); border-radius: 2px; transition: all 0.3s; }
+    .mobile-menu {
+      display: none; position: fixed; inset: 0; background: var(--navy-dark);
+      z-index: 200; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: white; font-size: 1.3rem; font-weight: 700; }
+    .mobile-menu a:hover { color: var(--yellow); }
+    .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; }
+
     @media (max-width: 1024px) {
       .hero-inner { grid-template-columns: 1fr; }
       .hero-mascot { display: none; }
@@ -335,6 +348,7 @@
       .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
       .commercial-banner { grid-template-columns: 1fr; }
       .nav-links { display: none; }
+      .hamburger { display: flex; }
     }
     @media (max-width: 600px) {
       .footer-top { grid-template-columns: 1fr; }
@@ -349,9 +363,9 @@
 <div class="top-bar">
   <div>📍 Serving Central Florida · Orange, Osceola, Lake, Polk, Seminole, Volusia & beyond</div>
   <div>
-    <span>Available </span>
-    <strong style="color:var(--yellow);">24 Hours / 7 Days a Week</strong>
-    <span class="top-bar-badge">Emergency Service</span>
+    <strong style="color:var(--yellow);">Mon–Sat 8AM–6PM</strong>
+    &nbsp;·&nbsp;
+    <span class="top-bar-badge">24/7 Emergency Line</span>
     &nbsp;·&nbsp;
     <a href="tel:4079222276">(407) 922-2276</a>
   </div>
@@ -375,9 +389,25 @@
     <div class="nav-right">
       <a href="tel:4079222276" class="nav-phone">📞 (407) 922-2276</a>
       <a href="#contact" class="nav-cta">Free Inspection</a>
+      <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
+  <a href="#services" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services</a>
+  <a href="#about" onclick="document.getElementById('mobileMenu').classList.remove('open')">About Us</a>
+  <a href="#pricing" onclick="document.getElementById('mobileMenu').classList.remove('open')">Pricing</a>
+  <a href="blog.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Blog</a>
+  <a href="#service-area" onclick="document.getElementById('mobileMenu').classList.remove('open')">Service Area</a>
+  <a href="#reviews" onclick="document.getElementById('mobileMenu').classList.remove('open')">Reviews</a>
+  <a href="#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
+  <a href="tel:4079222276" style="color:var(--yellow);font-size:1.5rem;">📞 (407) 922-2276</a>
+</div>
 
 <!-- HERO -->
 <section id="hero">
@@ -388,13 +418,13 @@
       <p class="hero-sub">Central Florida's most trusted pest control company. Serving residential homes, restaurants, hotels, resorts, warehouses, office buildings, and more — 24 hours a day, 7 days a week.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn-yellow">Schedule Free Inspection</a>
-        <a href="tel:4079222276" class="btn-outline-white">📞 Call 24/7: (407) 922-2276</a>
+        <a href="tel:4079222276" class="btn-outline-white">📞 📞 (407) 922-2276 · Emergency Line 24/7</a>
       </div>
       <div class="hero-trust">
         <div class="trust-pill">✅ Licensed & Insured</div>
-        <div class="trust-pill">✅ 24/7 Emergency Service</div>
+        <div class="trust-pill">✅ 24/7 Emergency Line</div>
         <div class="trust-pill">✅ Family Owned Since 1986</div>
-        <div class="trust-pill">⭐ 26 Five-Star Reviews</div>
+        <div class="trust-pill">⭐ Five-Star Google Reviews</div>
       </div>
     </div>
     <div class="hero-mascot">
@@ -507,7 +537,7 @@
   <div class="section-inner">
     <div class="about-grid">
       <div class="fade-up about-photo-stack">
-        <img src="assets/real-photos/team-building.jpg" alt="Pest Pro Team" class="about-main-photo" style="aspect-ratio:4/3;" />
+        <img src="assets/mascot/vant-official.jpg" alt="Pest Pro - Vant Mascot" class="about-main-photo" style="aspect-ratio:1;object-position:center top;" />
         <div class="about-badge-float">
           <div class="big">40+</div>
           <div class="small">Years of Experience</div>
@@ -517,7 +547,7 @@
         <div class="section-label">Our Story</div>
         <h2 class="section-title">Florida's Premier Pest Control — Since 1986</h2>
         <p class="section-desc" style="margin-bottom:1.5rem;">What started as a single operation in South Florida in 1986 has grown into one of Central Florida's most trusted names in pest control. Our founder, <strong>Dr. Bernie L. Howell, PhD</strong>, built this company on one principle: understand the science of pests before you try to eliminate them.</p>
-        <p class="section-desc" style="margin-bottom:2rem;">In 2017, <strong>Daniel Rumsey</strong> — who has worked alongside Dr. Howell since 1996 — took the helm of the Orlando division. In January 2020, Pest Pro LLC became fully independent, carrying forward the same science-backed standards, family values, and commitment to results that have defined this brand for nearly four decades.</p>
+        <p class="section-desc" style="margin-bottom:2rem;">In 2017, <strong>Daniel Rumsey</strong> — who has worked alongside Dr. Howell since 1996 — stepped in to lead the Orlando division. In January 2020, Pest Pro LLC became fully independent, carrying forward the same science-backed standards, family values, and commitment to results that have defined this brand for nearly four decades.</p>
         <div class="about-points">
           <div class="about-point">
             <div class="point-dot"></div>
@@ -536,15 +566,15 @@
           <div class="about-point">
             <div class="point-dot"></div>
             <div>
-              <h4>24/7 — Including Emergencies</h4>
-              <p>Pests don't keep business hours. Neither do we. Emergency response available around the clock, every day of the year.</p>
+              <h4>24/7 Emergency Line</h4>
+              <p>Our emergency line is always open. Regular service hours are Monday–Saturday, 8AM–6PM. For urgent situations outside those hours, we're a phone call away.</p>
             </div>
           </div>
           <div class="about-point">
             <div class="point-dot"></div>
             <div>
-              <h4>Certified, Licensed & Insured in Florida</h4>
-              <p>Fully compliant with all Florida Department of Agriculture requirements. Certified operators on every job.</p>
+              <h4>Licensed & Insured in Florida</h4>
+              <p>Fully compliant with all Florida Department of Agriculture licensing requirements. Every job is performed by trained, vetted professionals.</p>
             </div>
           </div>
         </div>
@@ -563,12 +593,12 @@
     </div>
     <div class="pricing-grid">
       <div class="pricing-card fade-up">
-        <h3>Quarterly Protection</h3>
+        <h3>Quarterly Maintenance</h3>
         <div class="pricing-price"><sup>$</sup>26<sub>/mo</sub></div>
-        <p class="pricing-note">Billed as $78 per visit · Every 3 months</p>
+        <p class="pricing-note">Billed as $78 per visit · Service every 3 months</p>
         <ul class="pricing-features">
           <li><span class="check">✓</span> Ants, Roaches & Spiders</li>
-          <li><span class="check">✓</span> Silverfish, Earwigs & Stored Product Pests</li>
+          <li><span class="check">✓</span> General household pests</li>
           <li><span class="check">✓</span> Exterior perimeter treatment</li>
           <li><span class="check">✓</span> Interior inspection included</li>
           <li><span class="check">✓</span> Satisfaction guarantee</li>
@@ -577,16 +607,16 @@
       </div>
       <div class="pricing-card featured fade-up">
         <div class="pricing-badge">Most Popular</div>
-        <h3>Monthly Protection Plan</h3>
-        <div class="pricing-price"><sup>$</sup>49<sub>/mo</sub></div>
-        <p class="pricing-note">Year-round coverage · Billed monthly</p>
+        <h3>Bi-Monthly Service</h3>
+        <div class="pricing-price"><sup>$</sup>79<sub>/visit</sub></div>
+        <p class="pricing-note">Service every 2 months · 6 visits per year</p>
         <ul class="pricing-features">
           <li><span class="check">✓</span> Everything in Quarterly</li>
-          <li><span class="check">✓</span> Mosquito treatment (seasonal)</li>
-          <li><span class="check">✓</span> Rodent monitoring</li>
+          <li><span class="check">✓</span> More frequent monitoring</li>
+          <li><span class="check">✓</span> Faster response to activity</li>
           <li><span class="check">✓</span> Free re-service between visits</li>
           <li><span class="check">✓</span> Priority scheduling</li>
-          <li><span class="check">✓</span> 24/7 emergency access</li>
+          <li><span class="check">✓</span> Emergency line access</li>
         </ul>
         <a href="#contact" class="btn-yellow-solid">Get Started →</a>
       </div>
@@ -605,7 +635,7 @@
         <a href="#contact" class="btn-navy">Request Quote →</a>
       </div>
     </div>
-    <p style="text-align:center;font-size:0.8rem;color:var(--muted);margin-top:1.5rem;">* Quarterly pricing applies to preventative maintenance for general household pests only. Initial infestation removal quoted separately after inspection. All pricing subject to property size and conditions.</p>
+    <p style="text-align:center;font-size:0.8rem;color:var(--muted);margin-top:1.5rem;">* All maintenance plan pricing is for preventative service on general household pests only. Initial service charges to remove existing infestations are quoted separately after inspection. Pricing subject to property size and conditions.</p>
   </div>
 </section>
 
@@ -621,8 +651,8 @@
         <div class="rating-num">5.0</div>
         <div>
           <div class="stars">★★★★★</div>
-          <div style="font-size:0.85rem;font-weight:700;color:var(--navy);">26 Google Reviews</div>
-          <div style="font-size:0.75rem;color:var(--muted);">Zero negative reviews</div>
+          <div style="font-size:0.85rem;font-weight:700;color:var(--navy);">Five-Star Google Reviews</div>
+          <div style="font-size:0.75rem;color:var(--muted);">100% positive · Zero negatives</div>
         </div>
       </div>
     </div>
@@ -684,7 +714,7 @@
           <div class="county-card"><h4>Lake County</h4><p>Clermont, Leesburg, Tavares, Minneola, Groveland</p></div>
           <div class="county-card"><h4>Polk County</h4><p>Lakeland, Winter Haven, Haines City, Davenport, Dundee</p></div>
           <div class="county-card"><h4>Seminole County</h4><p>Sanford, Altamonte Springs, Longwood, Casselberry, Lake Mary</p></div>
-          <div class="county-card"><h4>Volusia County</h4><p>Deltona, Deland & surrounding areas</p></div>
+          <div class="county-card"><h4>North Lake County</h4><p>Mount Dora, Eustis, Tavares, Leesburg & surrounding areas</p></div>
         </div>
       </div>
       <div class="fade-up">
@@ -712,7 +742,8 @@
           <span class="city-pill">Winter Haven</span>
           <span class="city-pill">Minneola</span>
           <span class="city-pill">Lake Mary</span>
-          <span class="city-pill">Deltona</span>
+          <span class="city-pill">Mount Dora</span>
+          <span class="city-pill">Eustis</span>
           <span class="city-pill">Poinciana</span>
           <span class="city-pill">Buena Ventura Lakes</span>
           <span class="city-pill">Groveland</span>
@@ -771,7 +802,7 @@
   <p>24/7 service across Central Florida. No obligation, no pressure — just results.</p>
   <div class="cta-actions">
     <a href="#contact" class="btn-navy-lg">Schedule Free Inspection</a>
-    <a href="tel:4079222276" class="btn-outline-navy">📞 Call 24/7: (407) 922-2276</a>
+    <a href="tel:4079222276" class="btn-outline-navy">📞 📞 (407) 922-2276 · Emergency Line 24/7</a>
   </div>
 </div>
 
@@ -793,7 +824,7 @@
         </div>
         <div class="contact-detail">
           <div class="contact-icon">🕐</div>
-          <div><div class="contact-label">Hours</div><div class="contact-value">24 Hours / 7 Days a Week</div></div>
+          <div><div class="contact-label">Hours</div><div class="contact-value">Mon–Sat: 8AM–6PM<br/><span style="font-size:0.85rem;color:var(--muted);">24/7 Emergency Line Available</span></div></div>
         </div>
         <div class="contact-detail">
           <div class="contact-icon">📍</div>
@@ -895,7 +926,7 @@
     </div>
     <div class="footer-bottom">
       <div>© 2025 Pest Pro LLC · All Rights Reserved · Licensed & Insured in Florida</div>
-      <div>Serving Orange, Osceola, Lake, Polk, Seminole & Volusia Counties</div>
+      <div>Serving Orange, Osceola, Lake, Polk & Seminole Counties</div>
     </div>
   </div>
 </footer>
