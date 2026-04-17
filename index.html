@@ -76,11 +76,7 @@
       background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
       color: var(--white); padding: 5rem 5% 4rem; position: relative; overflow: hidden;
     }
-    #hero::before {
-      content: ''; position: absolute; inset: 0;
-      background: url('assets/logos/logo-official.jpg') center/cover no-repeat;
-      opacity: 0.12;
-    }
+    #hero::before { display: none; }
     .hero-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 4rem; align-items: center; position: relative; }
     .hero-tag {
       display: inline-flex; align-items: center; gap: 0.5rem;
@@ -416,7 +412,7 @@
     <div>
       <div class="hero-tag">⭐ Florida's Premier Pest Control Experts — Proven, Trusted, Guaranteed</div>
       <h1>We Don't Just Treat Pests.<br/><em>We Eliminate Them.</em></h1>
-      <p class="hero-sub">Central Florida's most trusted pest control company. Serving residential homes, restaurants, hotels, resorts, warehouses, office buildings, and more — 24 hours a day, 7 days a week.</p>
+      <p class="hero-sub">Central Florida's most trusted pest control company. Serving residential homes, restaurants, hotels, resorts, warehouses, office buildings, and more. Available 24 hours a day, 7 days a week.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn-yellow">Schedule Free Inspection</a>
         <a href="tel:4079222276" class="btn-outline-white">📞 (407) 922-2276 · Call Anytime</a>
