@@ -866,17 +866,17 @@
         </div>
       </div>
       <div class="fade-up">
-        <form style="display:flex;flex-direction:column;gap:1rem;" onsubmit="return false;">
+        <form style="display:flex;flex-direction:column;gap:1rem;" action="https://formspree.io/f/xnjlpewz" method="POST">
           <div class="form-row">
-            <div class="form-field"><label>First Name</label><input type="text" placeholder="John" /></div>
-            <div class="form-field"><label>Last Name</label><input type="text" placeholder="Smith" /></div>
+            <div class="form-field"><label>First Name</label><input type="text" name="first_name" placeholder="John" /></div>
+            <div class="form-field"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" /></div>
           </div>
-          <div class="form-field"><label>Phone Number</label><input type="tel" placeholder="(407) 555-0000" /></div>
-          <div class="form-field"><label>Email Address</label><input type="email" placeholder="you@email.com" /></div>
-          <div class="form-field"><label>City / Zip Code</label><input type="text" placeholder="Kissimmee, FL 34741" /></div>
+          <div class="form-field"><label>Phone Number</label><input type="tel" name="phone" placeholder="(407) 555-0000" /></div>
+          <div class="form-field"><label>Email Address</label><input type="email" name="email" placeholder="you@email.com" /></div>
+          <div class="form-field"><label>City / Zip Code</label><input type="text" name="city_zip" placeholder="Kissimmee, FL 34741" /></div>
           <div class="form-field">
             <label>Property Type</label>
-            <select>
+            <select name="property_type">
               <option disabled selected>Select type...</option>
               <option>Residential Home</option>
               <option>Restaurant / Food Service</option>
@@ -891,7 +891,7 @@
           </div>
           <div class="form-field">
             <label>Pest Problem</label>
-            <select>
+            <select name="pest_problem">
               <option disabled selected>What are you dealing with?</option>
               <option>Ants</option><option>Roaches</option><option>Rodents (Rats/Mice)</option>
               <option>Bed Bugs</option><option>Mosquitoes</option><option>Spiders</option>
@@ -899,7 +899,7 @@
               <option>General Maintenance Plan</option><option>Not Sure / Multiple Issues</option>
             </select>
           </div>
-          <div class="form-field"><label>Additional Details (optional)</label><textarea placeholder="Tell us more about your situation..."></textarea></div>
+          <div class="form-field"><label>Additional Details (optional)</label><textarea name="message" placeholder="Tell us more about your situation..."></textarea></div>
           <button type="submit" style="background:var(--yellow);color:var(--navy);border:none;padding:1rem;border-radius:8px;font-weight:800;font-size:1rem;cursor:pointer;">Request Free Inspection →</button>
           <p style="font-size:0.75rem;color:var(--muted);">By submitting you agree to receive follow-up via phone/SMS/email. Reply STOP to opt out anytime.</p>
         </form>
