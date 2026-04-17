@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Pest Pro LLC — Official Logo (PEST PRO spaced variant)
+  ═══════════════════════════════════════════════════════
+  Brand Colors:
+    Yellow:  #FFB800
+    Navy:    #1a2557
+    Red:     #cc2200
+    White:   #ffffff
+
+  Font: Impact (must be installed for correct render)
+  Size: 480x160 base unit (fully scalable via viewBox)
+
+  USAGE GUIDE:
+  ┌─────────────────────────────────────────────────────┐
+  │ Web / screen         → pestpro-logo-spaced-web.png  │
+  │ Business cards       → pestpro-logo-spaced-print.png│
+  │ Banners / large      → pestpro-logo-spaced-hires.png│
+  │ Shirts / embroidery  → pestpro-logo-spaced-         │
+  │                         transparent.png             │
+  │ Documents / Word/PDF → pestpro-logo-spaced.pdf      │
+  │ Illustrator/Inkscape → pestpro-logo-spaced.svg      │
+  └─────────────────────────────────────────────────────┘
+  Last updated: 2026-03-28
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 480 160"
+     width="480" height="160"
+     role="img"
+     aria-label="Pest Pro logo">
+
+  <title>Pest Pro</title>
+
+  <!-- White background (delete this rect for transparent use) -->
+  <rect width="480" height="160" fill="#ffffff"/>
+
+  <!--
+    PEST: x=14, baseline y=127
+    PR:   x=227, baseline y=127 (gap=22px after PEST)
+    Font: Impact 100px, yellow fill #FFB800, navy stroke #1a2557 6px
+    NOTE: Requires Impact font installed for correct rendering.
+          For guaranteed output use the PNG or PDF exports.
+  -->
+  <text
+    x="14" y="127"
+    font-family="Impact, 'Arial Black', sans-serif"
+    font-size="100"
+    font-weight="900"
+    fill="#FFB800"
+    stroke="#1a2557"
+    stroke-width="6"
+    stroke-linejoin="round"
+    paint-order="stroke fill">PEST</text>
+
+  <text
+    x="227" y="127"
+    font-family="Impact, 'Arial Black', sans-serif"
+    font-size="100"
+    font-weight="900"
+    fill="#FFB800"
+    stroke="#1a2557"
+    stroke-width="6"
+    stroke-linejoin="round"
+    paint-order="stroke fill">PR</text>
+
+  <!--
+    TARGET "O"
+    Center: x=390, y=80
+    Rings (outer→inner): navy r=50, white r=42, red r=31, white r=20, red r=9, white dot r=3
+    Crosshair: navy lines, 5px, from y=20→140 and x=330→450
+  -->
+  <g id="target-o" transform="translate(390,80)">
+
+    <!-- Crosshair lines (behind rings) -->
+    <line x1="0"   y1="-60" x2="0"   y2="60"  stroke="#1a2557" stroke-width="5" stroke-linecap="square"/>
+    <line x1="-60" y1="0"   x2="60"  y2="0"   stroke="#1a2557" stroke-width="5" stroke-linecap="square"/>
+
+    <!-- Concentric rings -->
+    <circle r="50" fill="#1a2557"/>
+    <circle r="42" fill="#ffffff"/>
+    <circle r="31" fill="#cc2200"/>
+    <circle r="20" fill="#ffffff"/>
+    <circle r="9"  fill="#cc2200"/>
+    <circle r="3"  fill="#ffffff"/>
+
+  </g>
+
+</svg>
