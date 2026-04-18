@@ -6,8 +6,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pest Pro LLC | Central Florida's Premier Pest Control | Orlando, Kissimmee & Beyond</title>
   <meta name="description" content="Florida's Premier Pest Control Experts — Proven, Trusted, Guaranteed. Residential & Commercial. Restaurants, Hotels, Warehouses, Resorts & more. 24/7 service across Central Florida. Call (407) 922-2276." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pestprollc.com/" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pestprollc.com/" />
+  <meta property="og:title" content="Pest Pro LLC | Central Florida's Premier Pest Control" />
+  <meta property="og:description" content="Family-owned pest control serving Central Florida since 1988. Residential, commercial, restaurants, hotels & more. Licensed, insured, available 24/7. Call (407) 922-2276." />
+  <meta property="og:image" content="https://pestprollc.com/assets/mascot/vant-hero.jpg" />
+  <meta property="og:site_name" content="Pest Pro LLC" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pest Pro LLC | Central Florida's Premier Pest Control" />
+  <meta name="twitter:description" content="Family-owned pest control serving Central Florida since 1988. Call (407) 922-2276." />
+  <meta name="twitter:image" content="https://pestprollc.com/assets/mascot/vant-hero.jpg" />
+
+  <!-- LocalBusiness Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://pestprollc.com",
+    "name": "Pest Pro LLC",
+    "description": "Family-owned pest control company serving Central Florida since 1988. Residential and commercial pest management including roaches, rodents, ants, bed bugs, mosquitoes, and more.",
+    "url": "https://pestprollc.com",
+    "telephone": "+14079222276",
+    "email": "info@PestProLLC.com",
+    "logo": "https://pestprollc.com/assets/logos/logo-official.jpg",
+    "image": "https://pestprollc.com/assets/mascot/vant-hero.jpg",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3211 Vineland Road, #107",
+      "addressLocality": "Kissimmee",
+      "addressRegion": "FL",
+      "postalCode": "34746",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 28.3772,
+      "longitude": -81.4937
+    },
+    "areaServed": [
+      {"@type": "County", "name": "Orange County, FL"},
+      {"@type": "County", "name": "Osceola County, FL"},
+      {"@type": "County", "name": "Lake County, FL"},
+      {"@type": "County", "name": "Polk County, FL"},
+      {"@type": "County", "name": "Seminole County, FL"}
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "24",
+      "bestRating": "5"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Pest Control Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ant Control"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Roach Extermination"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Rodent Control"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bed Bug Treatment"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mosquito Treatment"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Spider Control"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wasp & Stinging Insect Removal"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Flea & Tick Treatment"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Pest Control"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "General Maintenance Plans"}}
+      ]
+    },
+    "sameAs": [
+      "https://www.facebook.com/pestprollc"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/mascot/vant-hero.jpg" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -54,7 +140,8 @@
       height: 110px; gap: 1rem;
     }
     .nav-logo img { height: 110px; width: auto; }
-    @media (max-width: 600px) { .nav-logo img { height: 75px; } }
+    @media (max-width: 1024px) { .nav-inner { height: 72px; } .nav-logo img { height: 60px; } }
+    @media (max-width: 600px) { .nav-inner { height: 64px; } .nav-logo img { height: 52px; } }
     .nav-links { display: flex; gap: 0.1rem; list-style: none; }
     .nav-links a {
       padding: 0.5rem 0.75rem; font-size: 0.85rem; font-weight: 600;
@@ -339,18 +426,32 @@
     .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; }
 
     @media (max-width: 1024px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-mascot { display: none; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-mascot { display: flex; justify-content: center; order: -1; margin-bottom: 1.5rem; }
+      .hero-mascot img { max-width: 260px; width: 70vw; border-radius: 16px; }
+      .hero-tag { margin: 0 auto 1.2rem; }
+      .hero-sub { margin-left: auto; margin-right: auto; }
+      .hero-actions { justify-content: center; flex-direction: column; align-items: center; }
+      .hero-actions a { width: 100%; max-width: 340px; text-align: center; }
+      .hero-trust { justify-content: center; }
       .about-grid, .contact-grid, .area-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
       .commercial-banner { grid-template-columns: 1fr; }
+      .commercial-banner > div:last-child { text-align: center; }
       .nav-links { display: none; }
+      .nav-phone { display: none; }
       .hamburger { display: flex; }
+      .trust-bar-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; justify-items: start; }
+      section { padding: 3.5rem 5%; }
     }
     @media (max-width: 600px) {
       .footer-top { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .counties-grid { grid-template-columns: 1fr; }
+      .trust-bar-inner { grid-template-columns: 1fr; }
+      .hero-mascot img { max-width: 200px; }
+      section { padding: 3rem 4%; }
+      .pricing-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -423,7 +524,7 @@
       </div>
     </div>
     <div class="hero-mascot">
-      <img src="assets/mascot/vant-hero.jpg" alt="Vant - Pest Pro Mascot" />
+      <img src="assets/mascot/vant-hero.jpg" alt="Vant - Pest Pro Mascot" width="640" height="640" />
     </div>
   </div>
 </section>
@@ -532,7 +633,7 @@
   <div class="section-inner">
     <div class="about-grid">
       <div class="fade-up about-photo-stack">
-        <img src="assets/mascot/vant-hero.jpg" alt="Pest Pro - Vant Mascot" class="about-main-photo" style="aspect-ratio:1;object-position:center top;border-radius:20px;border:3px solid var(--yellow);box-shadow:0 0 0 6px rgba(255,184,0,0.18),0 20px 40px rgba(0,0,0,0.2);" />
+        <img src="assets/mascot/ready/vant-front-door-clipboard-homeowner.jpg" alt="Pest Pro technician arriving at a Central Florida home" class="about-main-photo" width="600" height="600" loading="lazy" style="aspect-ratio:1;object-position:center top;border-radius:20px;border:3px solid var(--yellow);box-shadow:0 0 0 6px rgba(255,184,0,0.18),0 20px 40px rgba(0,0,0,0.2);" />
         <div class="about-badge-float">
           <div class="big">40+</div>
           <div class="small">Years of Experience</div>
@@ -861,8 +962,23 @@
           <div class="contact-icon">📍</div>
           <div><div class="contact-label">Service Area</div><div class="contact-value">Orange, Osceola, Lake, Polk, Seminole & beyond</div></div>
         </div>
-        <div style="margin-top:2rem;">
-          <img src="assets/mascot/vant-hero.jpg" alt="Vant" style="width:100%;max-width:320px;height:auto;border-radius:16px;border:2px solid var(--yellow);box-shadow:0 0 0 4px rgba(255,184,0,0.2);" />
+        <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.8rem;">
+          <div style="display:flex;align-items:center;gap:0.9rem;background:var(--gray);border-radius:10px;padding:1rem 1.2rem;">
+            <span style="font-size:1.4rem;">✅</span>
+            <div><div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);">Licensed & Insured</div><div style="font-size:0.9rem;font-weight:600;color:var(--navy);">Florida Dept. of Agriculture · FDACS</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.9rem;background:var(--gray);border-radius:10px;padding:1rem 1.2rem;">
+            <span style="font-size:1.4rem;">⭐</span>
+            <div><div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);">Google Reviews</div><div style="font-size:0.9rem;font-weight:600;color:var(--navy);">5.0 Stars · 24 Reviews · 100% Positive</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.9rem;background:var(--gray);border-radius:10px;padding:1rem 1.2rem;">
+            <span style="font-size:1.4rem;">🕐</span>
+            <div><div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);">Availability</div><div style="font-size:0.9rem;font-weight:600;color:var(--navy);">24 Hours · 7 Days a Week</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.9rem;background:var(--gray);border-radius:10px;padding:1rem 1.2rem;">
+            <span style="font-size:1.4rem;">🏠</span>
+            <div><div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);">Family Owned</div><div style="font-size:0.9rem;font-weight:600;color:var(--navy);">Serving Central Florida Since 1988</div></div>
+          </div>
         </div>
       </div>
       <div class="fade-up">
@@ -956,7 +1072,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© 2025 Pest Pro LLC · All Rights Reserved · Licensed & Insured in Florida</div>
+      <div>© 2026 Pest Pro LLC · All Rights Reserved · Licensed & Insured in Florida</div>
       <div>Serving Orange, Osceola, Lake, Polk & Seminole Counties</div>
     </div>
   </div>
