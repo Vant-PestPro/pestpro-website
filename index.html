@@ -3,7 +3,7 @@
 <head>
   <meta name="google-site-verification" content="rmne-9yeOifNlnt4iIPk6Y_uE0vn0qA08sFusiJicJc" />
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
   <title>Pest Control Orlando FL | Pest Pro LLC | (407) 922-2276</title>
   <meta name="description" content="Central Florida's trusted pest control company since 1988. Residential and commercial. Roaches, rodents, ants, bed bugs, mosquitoes and more. Licensed, insured, available 24/7. Call (407) 922-2276." />
   <meta name="robots" content="index, follow" />
@@ -55,19 +55,9 @@
   <style>
     /* ── CSS RESET ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; font-size: 20px; zoom: 1; }
-    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; background: #ffffff; line-height: 1.65; -webkit-font-smoothing: antialiased; zoom: 1; font-size: 1rem; }
-    /* Samsung Internet browser fix */
-    @media screen and (-webkit-min-device-pixel-ratio: 0) {
-      html { font-size: 20px; }
-      body { font-size: 16px; }
-      p, li, .section-desc, .review-text, .about-point p, .how-step p,
-      .faq-item p, .service-card p, .county-card p, .footer-col a,
-      .trust-bar-item, .comm-tag, .commercial-banner p, .contact-value,
-      .body-text, .pricing-features li { font-size: 16px !important; }
-      .service-card h3, .how-step h3, .faq-item h3, .about-point h4,
-      .pricing-card h3, .section-title, .review-author { font-size: 17px !important; }
-    }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; background: #ffffff; line-height: 1.65; -webkit-font-smoothing: antialiased; font-size: clamp(16px, 4.5vw, 20px); }
+
     /* CHROME ANDROID FONT BOOSTING FIX: max-height on all text containers */
     p, h1, h2, h3, h4, h5, h6, li, span, a, div, section, label { max-height: 999999px; }
     img { max-width: 100%; height: auto; display: block; }
@@ -300,6 +290,43 @@
     .fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
+
+    /* ══ SAMSUNG / SMALL ANDROID (360-430px) ══ */
+    @media (max-width: 430px) {
+      html { font-size: clamp(16px, 4.5vw, 18px) !important; }
+      body { font-size: clamp(16px, 4.5vw, 18px) !important; }
+      p, .section-desc, .body-text { font-size: clamp(15px, 4.2vw, 18px) !important; line-height: 1.7 !important; }
+      .service-card p { font-size: clamp(14px, 3.8vw, 16px) !important; }
+      .service-card h3 { font-size: clamp(15px, 4vw, 17px) !important; }
+      .review-text { font-size: clamp(15px, 4.2vw, 17px) !important; }
+      .review-author { font-size: clamp(14px, 3.8vw, 16px) !important; }
+      .how-step p { font-size: clamp(15px, 4.2vw, 17px) !important; }
+      .how-step h3 { font-size: clamp(16px, 4.5vw, 18px) !important; }
+      .about-point p { font-size: clamp(15px, 4.2vw, 17px) !important; }
+      .about-point h4 { font-size: clamp(16px, 4.4vw, 17px) !important; }
+      .faq-item p { font-size: clamp(14px, 3.9vw, 16px) !important; }
+      .faq-item h3 { font-size: clamp(15px, 4.2vw, 17px) !important; }
+      .pricing-features li { font-size: clamp(14px, 3.8vw, 16px) !important; }
+      .pricing-note { font-size: clamp(13px, 3.5vw, 15px) !important; }
+      .pricing-card h3 { font-size: clamp(16px, 4.4vw, 18px) !important; }
+      .trust-bar-item { font-size: clamp(14px, 3.8vw, 16px) !important; }
+      .county-card p { font-size: clamp(13px, 3.6vw, 15px) !important; }
+      .county-card h4 { font-size: clamp(14px, 3.8vw, 16px) !important; }
+      .footer-col a { font-size: clamp(14px, 3.8vw, 16px) !important; }
+      .footer-logo p { font-size: clamp(14px, 3.8vw, 16px) !important; }
+      .comm-tag { font-size: clamp(13px, 3.5vw, 15px) !important; }
+      .hero-sub { font-size: clamp(15px, 4.2vw, 17px) !important; }
+      .contact-value { font-size: clamp(16px, 4.5vw, 18px) !important; }
+      .contact-label { font-size: clamp(12px, 3.2vw, 14px) !important; }
+      .hero h1 { font-size: clamp(24px, 7vw, 32px) !important; }
+      .section-title { font-size: clamp(22px, 6vw, 28px) !important; }
+      .emergency-band strong { font-size: clamp(14px, 3.8vw, 16px) !important; }
+      .commercial-banner p { font-size: clamp(14px, 3.8vw, 16px) !important; }
+      .commercial-banner h3 { font-size: clamp(17px, 4.7vw, 20px) !important; }
+      .reviews-grid, .pricing-grid, .how-grid, .about-grid,
+      .area-inner, .contact-grid, .form-row, .footer-top { grid-template-columns: 1fr !important; }
+      .services-grid { grid-template-columns: 1fr 1fr !important; }
+    }
     /* ══ TABLET (max-width: 1024px) ══ */
     @media (max-width: 1024px) {
       .nav-inner { height: 76px; }
