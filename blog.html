@@ -35,7 +35,8 @@
     .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.8rem;margin-top:2rem}
     .blog-card{background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s;display:flex;flex-direction:column}
     .blog-card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.08)}
-    .blog-thumb{height:180px;display:flex;align-items:center;justify-content:center;font-size:4.5rem}
+    .blog-thumb{height:180px;display:flex;align-items:center;justify-content:center;font-size:4.5rem;overflow:hidden;}
+    .blog-thumb img{max-height:150px;width:auto;object-fit:contain;display:block;margin:auto;}
     .bg1{background:linear-gradient(135deg,#e8f4ff,#c5deff)}.bg2{background:linear-gradient(135deg,#fff8e1,#ffecb3)}
     .bg3{background:linear-gradient(135deg,#fce4ec,#f8bbd0)}.bg4{background:linear-gradient(135deg,#e8f5e9,#c8e6c9)}
     .bg5{background:linear-gradient(135deg,#f3e5f5,#e1bee7)}
@@ -103,7 +104,7 @@
   <div class="section-inner">
     <div class="blog-grid">
       <div class="blog-card">
-        <div class="blog-thumb bg1">🛏️</div>
+        <div class="blog-thumb bg1"><img src="../assets/icons/illustrated/pest-bedbug-2.png" alt="Bed Bugs"></div>
         <div class="blog-body">
           <span class="blog-tag">Bed Bugs</span>
           <h2>Bed Bugs in Orlando Hotels & Resorts: What Property Managers Need to Know</h2>
@@ -130,7 +131,7 @@
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-thumb bg4">🐭</div>
+        <div class="blog-thumb bg4"><img src="../assets/icons/illustrated/pest-rat-1.png" alt="Rodent"></div>
         <div class="blog-body">
           <span class="blog-tag">Rodents</span>
           <h2>5 Signs You Have a Rodent Problem (Before It Gets Serious)</h2>
@@ -139,7 +140,7 @@
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-thumb bg5">🍽️</div>
+        <div class="blog-thumb bg5"><img src="../assets/icons/illustrated/icon-dinnerware.png" alt="Restaurant"></div>
         <div class="blog-body">
           <span class="blog-tag">Commercial</span>
           <h2>Restaurant Pest Control in Florida: What Every Owner Needs to Know</h2>
