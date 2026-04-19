@@ -264,7 +264,9 @@
     .form-submit:hover { background: var(--yellow-dark); }
     .trust-creds { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
     .trust-cred { display: flex; align-items: center; gap: 14px; background: white; border-radius: 10px; padding: 14px 16px; border: 1px solid var(--border); }
-    .trust-cred-icon { font-size: 20px; }
+    .trust-cred-icon { font-size: 20px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; flex-shrink:0; overflow:hidden; }
+    .trust-cred-icon img { width:40px; height:40px; object-fit:contain; display:block; }
+    .contact-icon img { width:40px; height:40px; object-fit:contain; display:block; }
     .trust-cred-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); }
     .trust-cred-value { font-size: 16px; font-weight: 600; color: var(--navy); }
 
@@ -941,21 +943,21 @@
         <h2 class="section-title">Schedule Your Free Inspection</h2>
         <p class="section-desc" style="margin-bottom:28px;">We respond fast. Typically within 24 hours. Emergency service available around the clock.</p>
         <div class="contact-detail">
-          <div class="contact-icon"><img src="assets/icons/illustrated/icon-phone-red.png" alt="Phone" style="width:56px;height:56px;object-fit:contain;display:block;"></div>
+          <div class="contact-icon"><img src="assets/icons/illustrated/icon-phone-red.png" alt="Phone" ></div>
           <div><div class="contact-label">Phone / Emergency</div><a href="tel:4079222276" class="contact-value">(407) 922-2276</a></div>
         </div>
         <div class="contact-detail">
-          <div class="contact-icon"><img src="assets/icons/illustrated/icon-email.png" alt="Email" style="width:56px;height:56px;object-fit:contain;display:block;"></div>
+          <div class="contact-icon"><img src="assets/icons/illustrated/icon-email.png" alt="Email" ></div>
           <div><div class="contact-label">Email</div><a href="mailto:info@PestProLLC.com" class="contact-value">info@PestProLLC.com</a></div>
         </div>
         <div class="contact-detail">
-          <div class="contact-icon"><img src="assets/icons/illustrated/icon-clock.png" alt="Hours" style="width:56px;height:56px;object-fit:contain;display:block;"></div>
+          <div class="contact-icon"><img src="assets/icons/illustrated/icon-clock.png" alt="Hours" ></div>
           <div><div class="contact-label">Hours</div><div class="contact-value">Mon&ndash;Sat: 8AM&ndash;6PM<br/><span style="font-size:15px;color:var(--muted);font-weight:400;">Emergency service and appointments available 24 hours</span></div></div>
         </div>
         <div class="trust-creds">
-          <div class="trust-cred"><span class="trust-cred-icon"><img src="assets/icons/illustrated/icon-shield-check.png" alt="Licensed and Insured" style="width:56px;height:56px;object-fit:contain;display:block;"></span><div><div class="trust-cred-label">Licensed and Insured</div><div class="trust-cred-value">Florida FDACS &middot; License JB304313</div></div></div>
-          <div class="trust-cred"><span class="trust-cred-icon"><img src="assets/icons/illustrated/icon-star.png" alt="Google Reviews" style="width:56px;height:56px;object-fit:contain;display:block;"></span><div><div class="trust-cred-label">Google Reviews</div><div class="trust-cred-value">Five-Star Rated &middot; 100% Positive</div></div></div>
-          <div class="trust-cred"><span class="trust-cred-icon"><img src="assets/icons/illustrated/people-family.png" alt="Family Owned" style="width:56px;height:56px;object-fit:contain;display:block;"></span><div><div class="trust-cred-label">Family Owned</div><div class="trust-cred-value">Serving Central Florida Since 1988</div></div></div>
+          <div class="trust-cred"><span class="trust-cred-icon"><img src="assets/icons/illustrated/icon-shield-check.png" alt="Licensed and Insured" ></span><div><div class="trust-cred-label">Licensed and Insured</div><div class="trust-cred-value">Florida FDACS &middot; License JB304313</div></div></div>
+          <div class="trust-cred"><span class="trust-cred-icon"><img src="assets/icons/illustrated/icon-star.png" alt="Google Reviews" ></span><div><div class="trust-cred-label">Google Reviews</div><div class="trust-cred-value">Five-Star Rated &middot; 100% Positive</div></div></div>
+          <div class="trust-cred"><span class="trust-cred-icon"><img src="assets/icons/illustrated/people-family.png" alt="Family Owned" ></span><div><div class="trust-cred-label">Family Owned</div><div class="trust-cred-value">Serving Central Florida Since 1988</div></div></div>
         </div>
       </div>
       <div class="fade-up">
