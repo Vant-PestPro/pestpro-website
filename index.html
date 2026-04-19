@@ -55,8 +55,10 @@
   <style>
     /* ── CSS RESET ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; font-size: 16px; }
-    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; background: #ffffff; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; font-size: 16px; zoom: 1; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; background: #ffffff; line-height: 1.65; -webkit-font-smoothing: antialiased; zoom: 1; }
+    /* CHROME ANDROID FONT BOOSTING FIX: max-height on all text containers */
+    p, h1, h2, h3, h4, h5, h6, li, span, a, div, section, label { max-height: 999999px; }
     img { max-width: 100%; height: auto; display: block; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
@@ -1027,6 +1029,39 @@
 </div>
 
 <script>
+  // ANDROID CHROME FONT BOOSTING OVERRIDE
+  // Force minimum font sizes via JS since CSS alone is unreliable on Android Chrome
+  function enforceFontSizes() {
+    var minSizes = [
+      { sel: 'p', min: 16 },
+      { sel: '.service-card p', min: 15 },
+      { sel: '.review-text', min: 16 },
+      { sel: '.about-point p', min: 16 },
+      { sel: '.faq-item p', min: 15 },
+      { sel: '.how-step p', min: 16 },
+      { sel: '.pricing-features li', min: 15 },
+      { sel: '.section-desc', min: 16 },
+      { sel: '.footer-col a', min: 14 },
+      { sel: '.county-card p', min: 14 },
+      { sel: '.trust-bar-item', min: 15 },
+    ];
+    if (window.innerWidth <= 768) {
+      minSizes.forEach(function(rule) {
+        var els = document.querySelectorAll(rule.sel);
+        els.forEach(function(el) {
+          var cs = window.getComputedStyle(el);
+          var size = parseFloat(cs.fontSize);
+          if (size < rule.min) {
+            el.style.fontSize = rule.min + 'px';
+            el.style.maxHeight = '999999px';
+          }
+        });
+      });
+    }
+  }
+  document.addEventListener('DOMContentLoaded', enforceFontSizes);
+  window.addEventListener('resize', enforceFontSizes);
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.07 });
