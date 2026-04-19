@@ -183,8 +183,8 @@
       .review-text { font-size: 1rem; }
       .faq-item p { font-size: 1rem; }
       .faq-item h3 { font-size: 1.05rem; }
-      .how-step p { font-size: 1rem; }
-      .how-step h3 { font-size: 1.05rem; }
+      .how-step p { font-size: 16px !important; }
+      .how-step h3 { font-size: 17px !important; }
       .about-point p { font-size: 1rem; }
       .about-point h4 { font-size: 1.02rem; }
       .pricing-features li { font-size: 1.08rem; }
@@ -224,7 +224,7 @@
 
     /* ── SERVICES ── */
     #services { background: var(--gray); }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.1rem; }
     .service-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.4rem; transition: all 0.22s; position: relative; overflow: hidden; cursor: pointer; }
     .service-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--yellow); transform: scaleX(0); transition: transform 0.22s; transform-origin: left; }
     .service-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(26,37,87,0.12); border-color: var(--yellow); }
@@ -434,6 +434,9 @@
       .trust-bar-inner { grid-template-columns: 1fr; }
       section { padding: 2.8rem 4%; }
       .services-grid { grid-template-columns: 1fr 1fr; }
+      .service-card h3 { font-size: 17px !important; }
+      .service-card p { font-size: 15px !important; }
+      .service-card .service-link { font-size: 14px !important; }
       .pricing-grid { grid-template-columns: 1fr; }
       .reviews-grid { grid-template-columns: 1fr; }
       .blog-grid { grid-template-columns: 1fr; }
