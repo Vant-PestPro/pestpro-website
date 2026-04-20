@@ -58,7 +58,7 @@
     .section-label{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--yellow-dark);margin-bottom:8px}
     .section-title{font-size:clamp(24px,3vw,38px);font-weight:800;color:var(--navy);margin-bottom:16px;line-height:1.2}
     .body-text{font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:20px}
-    .pest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-top:32px}
+    .pest-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
     .pest-card{background:var(--gray);border-radius:12px;padding:24px 20px;text-align:center;border-top:3px solid var(--yellow)}
     .pest-card-icon{height:80px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;font-size:44px}
     .pest-card h3{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:6px}
@@ -101,6 +101,7 @@
     .footer-col a{font-size:14px;transition:color 0.2s}
     .footer-col a:hover{color:var(--yellow)}
     .footer-bottom{display:flex;justify-content:space-between;padding-top:20px;font-size:12px;flex-wrap:wrap;gap:8px}
+    @media(min-width:768px){.pest-grid{grid-template-columns:repeat(5,1fr)}}
     @media(max-width:1024px){.nav-links{display:none}.hamburger{display:flex}.nav-phone{display:none}.footer-top{grid-template-columns:1fr 1fr;gap:28px}.two-col{grid-template-columns:1fr;gap:32px}.mobile-cta-bar{display:flex}body{padding-bottom:72px}section{padding:48px 5%}}
     @media(max-width:600px){.nav-inner{height:70px}.nav-logo img{height:56px}.pest-grid{grid-template-columns:1fr 1fr}.footer-top{grid-template-columns:1fr}.page-hero{padding:48px 4% 40px}.page-hero p{font-size:16px}}
   </style>
@@ -211,6 +212,21 @@
         <div class="pest-card-icon"><img src="../assets/icons/illustrated/pest-phorid-fly.png" alt="Phorid Fly" style="max-height:70px;width:auto;margin:auto;" /></div>
         <h3>Phorid Flies</h3>
         <p>Tiny humpbacked flies that look like fruit flies but aren't. Their presence often signals decaying organic matter, plumbing issues, or in some cases, a dead rodent inside the structure.</p>
+      </div>
+      <div class="pest-card">
+        <div class="pest-card-icon"><img src="../assets/icons/illustrated/pest-oriental-roach.png" alt="Oriental Roach" style="max-height:70px;width:auto;margin:auto;" /></div>
+        <h3>Oriental Roaches</h3>
+        <p>Dark, slow-moving roaches found in drains, crawlspaces, and damp basements. Often called "water bugs." Their presence signals serious moisture issues.</p>
+      </div>
+      <div class="pest-card">
+        <div class="pest-card-icon"><img src="../assets/icons/illustrated/pest-anole-lizard.png" alt="Anole Lizard" style="max-height:70px;width:auto;margin:auto;" /></div>
+        <h3>Anole Lizards</h3>
+        <p>Common Florida lizards that find their way indoors through gaps and door sweeps. Harmless but unwanted — and their presence often points to open entry points that other pests use too.</p>
+      </div>
+      <div class="pest-card">
+        <div class="pest-card-icon"><img src="../assets/icons/illustrated/pest-drain-fly.png" alt="Drain Fly" style="max-height:70px;width:auto;margin:auto;" /></div>
+        <h3>Drain Flies</h3>
+        <p>Fuzzy, moth-like flies found near bathroom and kitchen drains. They breed in organic buildup inside pipes. If you're seeing them, your drain needs attention — not just a spray.</p>
       </div>
     </div>
   </div>
