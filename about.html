@@ -10,9 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    img{max-width:100%;height:auto;display:block}
     :root{--navy:#1a2557;--navy-dark:#111840;--yellow:#FFB800;--yellow-dark:#e0a200;--red:#cc2200;--white:#fff;--gray:#f5f6f8;--text:#1a1a1a;--muted:#6b7280;--border:#e5e7eb;--yellow-bg:#fffbf0}
     html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);font-size:16px;line-height:1.65}a{text-decoration:none;color:inherit}
-    .top-bar{background:var(--navy-dark);color:rgba(255,255,255,0.85);padding:6px 5%;font-size:12px;display:flex;justify-content:space-between;flex-wrap:nowrap;gap:0.5rem;white-space:nowrap;overflow:hidden}
+    .top-bar{background:var(--navy-dark);color:rgba(255,255,255,0.8);padding:8px 5%;font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:6px;overflow:hidden}
     .top-bar a{color:var(--yellow);font-weight:600}.top-bar-badge{background:var(--red);color:white;padding:0.15rem 0.6rem;border-radius:100px;font-size:0.72rem;font-weight:700;margin-left:0.5rem}
     nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:2px solid var(--yellow);padding:0 5%}
     .nav-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:70px;gap:0.5rem}
@@ -79,8 +80,8 @@
 </head>
 <body>
 <div class="top-bar">
-  <div>📍 Serving Central Florida · Orange, Osceola, Lake, Polk, Seminole & beyond</div>
-  <div><strong style="color:var(--yellow);">Mon–Sat 8AM–6PM</strong> · <span class="top-bar-badge">24/7 Emergency Line</span> · <a href="tel:4079222276">(407) 922-2276</a></div>
+  <div><span class="top-bar-badge">24/7</span>&nbsp; Emergency Line &middot; <a href="tel:4079222276" style="color:rgba(255,255,255,0.8);">(407) 922-2276</a></div>
+  <div>Mon&ndash;Sat 8AM&ndash;6PM &middot; Emergency and by appointment</div>
 </div>
 <nav>
   <div class="nav-inner">
