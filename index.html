@@ -112,7 +112,8 @@
     .nav-dropdown > a { display: flex; align-items: center; gap: 4px; }
     .nav-dropdown > a::after { content: ''; display: inline-block; width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); margin-top: -3px; transition: transform 0.2s; }
     .nav-dropdown:hover > a::after { transform: rotate(-135deg); margin-top: 2px; }
-    .dropdown-menu { display: none; position: absolute; top: calc(100% + 4px); left: 0; background: white; border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); min-width: 220px; padding: 8px 0; z-index: 300; }
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; padding-top: 8px; z-index: 300; min-width: 220px; }
+    .dropdown-menu-inner { background: white; border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); padding: 8px 0; }
     .nav-dropdown:hover .dropdown-menu { display: block; }
     .dropdown-menu a { display: block; padding: 9px 18px; font-size: 14px; font-weight: 600; color: var(--navy); border-radius: 0; white-space: nowrap; }
     .dropdown-menu a:hover { background: var(--yellow-bg); color: var(--yellow-dark); }
@@ -288,7 +289,7 @@
     /* ── FOOTER ── */
     footer { background: var(--navy-dark); color: rgba(255,255,255,0.7); padding: 56px 5% 24px; }
     .footer-inner { max-width: 1300px; margin: 0 auto; }
-    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 32px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); }
     .footer-logo img { height: 52px; width: auto; margin-bottom: 16px; border-radius: 6px; }
     .footer-logo p { font-size: 15px; line-height: 1.75; }
     .footer-phone { font-size: 20px; font-weight: 800; color: var(--yellow); margin-top: 16px; }
@@ -493,20 +494,22 @@
       <li class="nav-dropdown">
         <a href="index.html#services">Services</a>
         <div class="dropdown-menu">
-          <a href="services/ant-control.html">Ant Control</a>
-          <a href="services/roach-control.html">Roach Extermination</a>
-          <a href="services/rodent-control.html">Rodent Control</a>
-          <a href="services/bed-bug-treatment.html">Bed Bug Treatment</a>
-          <a href="services/mosquito-control.html">Mosquito Treatment</a>
-          <a href="services/wasp-bee-removal.html">Wasps &amp; Stinging Insects</a>
-          <a href="services/spider-control.html">Spider Control</a>
-          <a href="services/flea-tick-control.html">Fleas &amp; Ticks</a>
-          <div class="dropdown-divider"></div>
-          <a href="services/residential.html">Residential Programs</a>
-          <a href="services/commercial.html">Commercial Programs</a>
-          <a href="services/healthcare.html">Healthcare IPM</a>
-          <a href="services/food-service.html">Food Service IPM</a>
-          <a href="services/hospitality-training.html">Hospitality Training</a>
+          <div class="dropdown-menu-inner">
+            <a href="services/ant-control.html">Ant Control</a>
+            <a href="services/roach-control.html">Roach Extermination</a>
+            <a href="services/rodent-control.html">Rodent Control</a>
+            <a href="services/bed-bug-treatment.html">Bed Bug Treatment</a>
+            <a href="services/mosquito-control.html">Mosquito Treatment</a>
+            <a href="services/wasp-bee-removal.html">Wasps &amp; Stinging Insects</a>
+            <a href="services/spider-control.html">Spider Control</a>
+            <a href="services/flea-tick-control.html">Fleas &amp; Ticks</a>
+            <div class="dropdown-divider"></div>
+            <a href="services/residential.html">Residential Programs</a>
+            <a href="services/commercial.html">Commercial Programs</a>
+            <a href="services/healthcare.html">Healthcare IPM</a>
+            <a href="services/food-service.html">Food Service IPM</a>
+            <a href="services/hospitality-training.html">Hospitality Training</a>
+          </div>
         </div>
       </li>
       <li><a href="about.html">About</a></li>
@@ -682,7 +685,7 @@
         <div class="commercial-types">
           <a href="services/food-service.html" class="comm-tag">Restaurants</a>
           <a href="services/hospitality-training.html" class="comm-tag">Hotels &amp; Resorts</a>
-          <a href="services/commercial.html" class="comm-tag">Timeshares</a>
+          <a href="services/hospitality-training.html" class="comm-tag">Timeshares</a>
           <a href="services/healthcare.html" class="comm-tag">Healthcare</a>
           <a href="services/commercial.html" class="comm-tag">Warehouses</a>
           <a href="services/commercial.html" class="comm-tag">Office Buildings</a>
@@ -931,49 +934,6 @@
   </div>
 </section>
 
-<!-- BLOG -->
-<section id="blog" style="background:var(--gray);">
-  <div class="section-inner">
-    <div class="fade-up" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:32px;">
-      <div>
-        <div class="section-label">Pest Intelligence &amp; Industry Insights</div>
-        <h2 class="section-title">What Is Actually Happening Out There</h2>
-        <p class="section-desc" style="max-width:580px;">Not basic pest tips. Real information about emerging threats, resistant strains, and invasive species hitting Central Florida right now.</p>
-      </div>
-      <a href="blog.html" style="display:inline-block;background:var(--navy);color:white;padding:10px 20px;border-radius:8px;font-weight:700;font-size:15px;white-space:nowrap;">All Articles &rarr;</a>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px;" class="blog-grid-main">
-      <a href="blog.html" style="background:white;border-radius:12px;overflow:hidden;border:1px solid var(--border);display:block;transition:box-shadow 0.2s;" class="fade-up"><!-- article: blog/love-bug-season-florida.html — build next session -->
-        <div style="height:140px;background:linear-gradient(135deg,#fce4ec,#f48fb1);display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="assets/icons/illustrated/pest-lovebug.png" alt="Love Bug" loading="lazy" style="max-height:120px;width:auto;object-fit:contain;display:block;margin:auto;"></div>
-        <div style="padding:20px;background:white;">
-          <span style="display:inline-block;background:var(--yellow-bg);color:var(--yellow-dark);font-size:12px;font-weight:700;padding:3px 10px;border-radius:100px;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;">Invasive Species</span>
-          <h3 style="font-size:17px;font-weight:700;color:var(--navy);line-height:1.45;margin-bottom:8px;">Love Bug Season in Central Florida: Why the Swarms Are Getting Worse</h3>
-          <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:10px;">The Plecia nearctica is not native to Florida. It arrived in the 1940s and has expanded north every decade since. Here is what the latest swarm data shows and what actually works.</p>
-          <span style="font-size:14px;font-weight:700;color:var(--yellow-dark);">Read Article &rarr;</span>
-        </div>
-      </a>
-      <a href="blog.html" style="background:white;border-radius:12px;overflow:hidden;border:1px solid var(--border);display:block;transition:box-shadow 0.2s;" class="fade-up"><!-- article: blog/pyrethrin-resistant-bed-bugs.html — build next session -->
-        <div style="height:140px;background:linear-gradient(135deg,#ede7f6,#b39ddb);display:flex;align-items:center;justify-content:center;font-size:52px;">&#x1F9EC;</div>
-        <div style="padding:20px;background:white;">
-          <span style="display:inline-block;background:var(--yellow-bg);color:var(--yellow-dark);font-size:12px;font-weight:700;padding:3px 10px;border-radius:100px;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;">Emerging Threat</span>
-          <h3 style="font-size:17px;font-weight:700;color:var(--navy);line-height:1.45;margin-bottom:8px;">Pyrethrin-Resistant Bed Bugs: The Treatment Problem Nobody Is Talking About</h3>
-          <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:10px;">Virginia Tech's April 2025 discovery of the V419L gene mutation confirms what pest professionals have known: most spray-only treatments are failing. Here is what that means for hotels, resorts, and homeowners.</p>
-          <span style="font-size:14px;font-weight:700;color:var(--yellow-dark);">Read Article &rarr;</span>
-        </div>
-      </a>
-      <a href="blog.html" style="background:white;border-radius:12px;overflow:hidden;border:1px solid var(--border);display:block;transition:box-shadow 0.2s;" class="fade-up"><!-- article: blog/asian-lady-beetle-florida.html — build next session -->
-        <div style="height:140px;background:linear-gradient(135deg,#f1f8e9,#c5e1a5);display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="assets/icons/illustrated/pest-asian-lady-beetle.png" alt="Asian Lady Beetle" loading="lazy" style="max-height:120px;width:auto;object-fit:contain;display:block;margin:auto;"></div>
-        <div style="padding:20px;background:white;">
-          <span style="display:inline-block;background:var(--yellow-bg);color:var(--yellow-dark);font-size:12px;font-weight:700;padding:3px 10px;border-radius:100px;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;">Invasive Species</span>
-          <h3 style="font-size:17px;font-weight:700;color:var(--navy);line-height:1.45;margin-bottom:8px;">The Asian Lady Beetle: Lucky Symbol or Structural Invader? Florida Has Both Problems.</h3>
-          <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:10px;">Harmonia axyridis was introduced to control crop pests. It worked. Then it spread into homes by the thousands each fall. Here is what separates it from a harmless ladybug and what to do when they swarm.</p>
-          <span style="font-size:14px;font-weight:700;color:var(--yellow-dark);">Read Article &rarr;</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
@@ -1070,7 +1030,12 @@
           <li><a href="services/wasp-bee-removal.html">Wasps and Stinging Insects</a></li>
           <li><a href="services/spider-control.html">Spider Control</a></li>
           <li><a href="services/flea-tick-control.html">Fleas and Ticks</a></li>
-          <li><a href="services/commercial.html">Commercial Programs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Commercial Programs</h4>
+        <ul>
+          <li><a href="services/commercial.html">Commercial Pest Control</a></li>
           <li><a href="services/hospitality-training.html">Hospitality Training</a></li>
           <li><a href="services/healthcare.html">Healthcare IPM</a></li>
           <li><a href="services/food-service.html">Food Service IPM</a></li>
