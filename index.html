@@ -92,7 +92,9 @@
     }
 
     /* ── TOP BAR ── */
-    .top-bar { background: var(--navy-dark); color: rgba(255,255,255,0.8); padding: 8px 5%; font-size: 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+    .top-bar { background: var(--navy-dark); color: rgba(255,255,255,0.8); padding: 8px 5%; font-size: 13px; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 6px; overflow: hidden; }
+    .top-bar-phone { color: var(--yellow); font-weight: 800; font-size: 15px; white-space: nowrap; text-decoration: none; }
+    .top-bar-hide-mobile { }
     .top-bar-left { display: flex; align-items: center; gap: 8px; }
     .top-bar-badge { background: var(--red); color: white; padding: 2px 8px; border-radius: 100px; font-size: 11px; font-weight: 700; }
 
@@ -366,6 +368,7 @@
 
     /* ══ MOBILE (max-width: 600px) ══ */
     @media (max-width: 600px) {
+      .top-bar-hide-mobile { display: none; }
       .nav-inner { height: 70px; }
       .nav-logo img { height: 56px; }
       .reviews-grid { grid-template-columns: 1fr !important; }
@@ -456,11 +459,11 @@
 
 <!-- TOP BAR -->
 <div class="top-bar">
-  <div class="top-bar-left">
+  <div style="display:flex;align-items:center;gap:8px;white-space:nowrap;">
     <span class="top-bar-badge">24/7</span>
-    <span>Serving Central Florida &middot; Orange, Osceola, Lake, Polk &amp; Seminole</span>
+    <a href="tel:4079222276" class="top-bar-phone">(407) 922-2276</a>
   </div>
-  <div>Mon&ndash;Sat 8AM&ndash;6PM &nbsp;&middot;&nbsp; Emergency service available</div>
+  <div class="top-bar-hide-mobile" style="white-space:nowrap;">Mon&ndash;Sat 8AM&ndash;6PM &middot; Emergency service available</div>
 </div>
 
 <!-- NAV -->
