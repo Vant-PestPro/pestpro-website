@@ -270,12 +270,10 @@
     .contact-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
     .contact-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 4px; }
     .contact-value { font-size: 18px; font-weight: 700; color: var(--navy); }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .form-field { display: flex; flex-direction: column; gap: 6px; }
     .form-field label { font-size: 15px; font-weight: 600; color: var(--text); }
-    .form-field input, .form-field select, .form-field textarea { padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 16px; font-family: inherit; outline: none; transition: border-color 0.2s; background: white; color: var(--text); }
-    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--yellow); }
-    .form-field textarea { min-height: 90px; resize: vertical; }
+    .form-field input, .form-field select { padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 16px; font-family: inherit; outline: none; transition: border-color 0.2s; background: white; color: var(--text); }
+    .form-field input:focus, .form-field select:focus { border-color: var(--yellow); }
     .form-submit { background: var(--yellow); color: var(--navy); border: none; padding: 16px; border-radius: 8px; font-weight: 800; font-size: 18px; width: 100%; transition: background 0.2s; }
     .form-submit:hover { background: var(--yellow-dark); }
     .trust-creds { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
@@ -962,32 +960,13 @@
       </div>
       <div class="fade-up">
         <form style="display:flex;flex-direction:column;gap:14px;" action="https://formspree.io/f/xnjlpewz" method="POST">
-          <div class="form-row">
-            <div class="form-field"><label>First Name</label><input type="text" name="first_name" placeholder="John" required /></div>
-            <div class="form-field"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" /></div>
-          </div>
-          <div class="form-field"><label>Phone Number</label><input type="tel" name="phone" placeholder="(407) 555-0000" required /></div>
-          <div class="form-field"><label>Email Address</label><input type="email" name="email" placeholder="you@email.com" /></div>
-          <div class="form-field"><label>City / Zip Code</label><input type="text" name="city_zip" placeholder="Kissimmee, FL 34741" /></div>
+          <div class="form-field"><label>Your Name</label><input type="text" name="name" placeholder="Your name" required /></div>
+          <div class="form-field"><label>Phone Number</label><input type="tel" name="phone" placeholder="Your phone number" required /></div>
+          <div class="form-field"><label>Email Address</label><input type="email" name="email" placeholder="Your email address" /></div>
           <div class="form-field">
-            <label>Property Type</label>
-            <select name="property_type">
-              <option disabled selected>Select type...</option>
-              <option>Residential Home</option>
-              <option>Restaurant / Food Service</option>
-              <option>Hotel / Resort</option>
-              <option>Timeshare / Vacation Property</option>
-              <option>Office Building</option>
-              <option>Warehouse / Industrial</option>
-              <option>Healthcare / Assisted Living</option>
-              <option>Retail</option>
-              <option>Other Commercial</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label>Pest Problem</label>
+            <label>What are you dealing with? <span style="font-weight:400;color:var(--muted);">(optional)</span></label>
             <select name="pest_problem">
-              <option disabled selected>What are you dealing with?</option>
+              <option value="" selected>Select one if you know</option>
               <option>Ants</option>
               <option>Roaches</option>
               <option>Rodents (Rats/Mice)</option>
@@ -1000,7 +979,6 @@
               <option>Not Sure / Multiple Issues</option>
             </select>
           </div>
-          <div class="form-field"><label>Additional Details (optional)</label><textarea name="message" placeholder="Tell us more about your situation..."></textarea></div>
           <button type="submit" class="form-submit">Request Free Inspection &rarr;</button>
           <p style="font-size:12px;color:var(--muted);">By submitting you agree to receive follow-up via phone, SMS, or email. Reply STOP to opt out anytime.</p>
         </form>
