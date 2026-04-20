@@ -12,7 +12,7 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     img{max-width:100%;height:auto;display:block}
     :root{--navy:#1a2557;--navy-dark:#111840;--yellow:#FFB800;--yellow-dark:#e0a200;--red:#cc2200;--white:#fff;--gray:#f5f6f8;--text:#1a1a1a;--muted:#6b7280;--border:#e5e7eb;--yellow-bg:#fffbf0}
-    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);font-size:16px;line-height:1.65}a{text-decoration:none;color:inherit}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);font-size:16px;line-height:1.65;overflow-x:hidden;word-wrap:break-word;overflow-wrap:break-word}a{text-decoration:none;color:inherit}
     .top-bar{background:var(--navy-dark);color:rgba(255,255,255,0.8);padding:8px 5%;font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:6px;overflow:hidden}
     .top-bar a{color:var(--yellow);font-weight:600}.top-bar-badge{background:var(--red);color:white;padding:0.15rem 0.6rem;border-radius:100px;font-size:0.72rem;font-weight:700;margin-left:0.5rem}
     nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:2px solid var(--yellow);padding:0 5%}
@@ -80,8 +80,8 @@
 </head>
 <body>
 <div class="top-bar">
-  <div><span class="top-bar-badge">24/7</span>&nbsp; Emergency Line &middot; <a href="tel:4079222276" style="color:rgba(255,255,255,0.8);">(407) 922-2276</a></div>
-  <div>Mon&ndash;Sat 8AM&ndash;6PM &middot; Emergency and by appointment</div>
+  <div style="white-space:nowrap;"><span class="top-bar-badge">24/7</span>&nbsp; <a href="tel:4079222276" style="color:rgba(255,255,255,0.8);white-space:nowrap;">(407) 922-2276</a></div>
+  <div style="white-space:nowrap;">Mon&ndash;Sat 8AM&ndash;6PM</div>
 </div>
 <nav>
   <div class="nav-inner">
@@ -121,9 +121,9 @@
       <div class="fade-up">
         <div class="section-label">Our Story</div>
         <h2 class="section-title">Where Science Meets Service</h2>
-        <p style="font-size:1rem;line-height:1.8;color:var(--text);margin-bottom:1.2rem;">In 1986, <strong>Dr. Bernie L. Howell, PhD</strong> founded Pest Pro Services, LLC in South Florida with a simple but powerful idea: pest control should be grounded in science, not guesswork. As a credentialed expert in entomology and pest biology, Dr. Howell built his company on Integrated Pest Management principles ,  understanding the behavior, biology, and environmental factors of each pest before designing a treatment plan.</p>
-        <p style="font-size:1rem;line-height:1.8;color:var(--text);margin-bottom:1.2rem;">That approach set Pest Pro apart from day one. While competitors were spraying and hoping, Pest Pro was diagnosing and solving.</p>
-        <p style="font-size:1rem;line-height:1.8;color:var(--text);margin-bottom:2rem;"><strong>Daniel Rumsey</strong> has been part of the Pest Pro family since 1996. When the Orlando division's previous operator retired in 2017, Daniel stepped in to lead it ,  bringing nearly two decades of experience, hands-on training, and a deep commitment to the standards Dr. Howell established. In January 2020, Pest Pro LLC became fully independent, carrying forward the same science-backed approach, family values, and dedication to results.</p>
+        <p style="font-size:15px;line-height:1.8;color:var(--text);margin-bottom:1.2rem;">In 1986, <strong>Dr. Bernie L. Howell, PhD</strong> founded Pest Pro Services, LLC in South Florida with a simple but powerful idea: pest control should be grounded in science, not guesswork. As a credentialed expert in entomology and pest biology, Dr. Howell built his company on Integrated Pest Management principles ,  understanding the behavior, biology, and environmental factors of each pest before designing a treatment plan.</p>
+        <p style="font-size:15px;line-height:1.8;color:var(--text);margin-bottom:1.2rem;">That approach set Pest Pro apart from day one. While competitors were spraying and hoping, Pest Pro was diagnosing and solving.</p>
+        <p style="font-size:15px;line-height:1.8;color:var(--text);margin-bottom:2rem;"><strong>Daniel Rumsey</strong> has been part of the Pest Pro family since 1996. When the Orlando division's previous operator retired in 2017, Daniel stepped in to lead it ,  bringing nearly two decades of experience, hands-on training, and a deep commitment to the standards Dr. Howell established. In January 2020, Pest Pro LLC became fully independent, carrying forward the same science-backed approach, family values, and dedication to results.</p>
 
         <div class="timeline">
           <div class="timeline-item">
