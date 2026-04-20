@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pest Control St. Cloud FL | Licensed & Local | Pest Pro LLC | (407) 922-2276</title>
-  <meta name="description" content="Expert pest control in St. Cloud, FL. Ants, roaches, rodents, bed bugs, mosquitoes & more. Residential & commercial. Serving Osceola County. Call (407) 922-2276."/>
+  <meta name="description" content="Professional pest control in St. Cloud, FL. Serving Lake Toho, East Lake Toho, and all of Osceola County's southern communities. Call (407) 922-2276."/>
   <link rel="canonical" href="https://pestprollc.com/locations/st-cloud"/>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Pest Pro LLC","telephone":"(407) 922-2276","url":"https://pestprollc.com","address":{"@type":"PostalAddress","addressLocality":"St. Cloud","addressRegion":"FL","addressCountry":"US"},"areaServed":"St. Cloud, FL","description":"Professional pest control services in St. Cloud, FL."}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -16,30 +16,41 @@
     .top-bar{background:var(--navy-dark);color:rgba(255,255,255,0.85);padding:0.5rem 5%;font-size:0.8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}
     .top-bar a{color:var(--yellow);font-weight:600}.top-bar-badge{background:var(--red);color:white;padding:0.15rem 0.6rem;border-radius:100px;font-size:0.72rem;font-weight:700;margin-left:0.5rem}
     nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:2px solid var(--yellow);padding:0 5%}
-    .nav-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:110px;gap:1rem}
-    .nav-logo img{height:100px;width:auto}.nav-links{display:flex;gap:0.1rem;list-style:none}
-    .nav-links a{padding:0.5rem 0.75rem;font-size:0.85rem;font-weight:600;color:var(--navy);border-radius:6px;transition:all 0.2s;white-space:nowrap}
+    .nav-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:80px;gap:16px}
+    .nav-logo img{height:68px;width:auto}
+    .nav-links{display:flex;gap:0;list-style:none}
+    .nav-links a{padding:8px 12px;font-size:15px;font-weight:600;color:var(--navy);border-radius:6px;transition:all 0.2s;white-space:nowrap}
     .nav-links a:hover{color:var(--yellow-dark);background:var(--yellow-bg)}
-    .nav-right{display:flex;align-items:center;gap:1rem;flex-shrink:0}
-    .nav-phone{font-weight:800;color:var(--navy);font-size:1rem;white-space:nowrap}
-    .nav-cta{background:var(--yellow);color:var(--navy);padding:0.65rem 1.4rem;border-radius:6px;font-weight:800;font-size:0.85rem;white-space:nowrap}
+    .nav-dropdown{position:relative}
+    .nav-dropdown>a{display:flex;align-items:center;gap:4px}
+    .nav-dropdown>a::after{content:'';display:inline-block;width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform 0.2s}
+    .nav-dropdown:hover>a::after{transform:rotate(-135deg);margin-top:2px}
+    .dropdown-menu{display:none;position:absolute;top:100%;left:0;padding-top:8px;z-index:300;min-width:220px}
+    .dropdown-menu-inner{background:white;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 32px rgba(0,0,0,0.12);padding:8px 0}
+    .nav-dropdown:hover .dropdown-menu{display:block}
+    .dropdown-menu a{display:block;padding:9px 18px;font-size:14px;font-weight:600;color:var(--navy);white-space:nowrap}
+    .dropdown-menu a:hover{background:var(--yellow-bg);color:var(--yellow-dark)}
+    .dropdown-divider{height:1px;background:var(--border);margin:6px 0}
+    .nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+    .nav-phone{font-weight:800;color:var(--navy);font-size:16px;white-space:nowrap}
+    .nav-cta{background:var(--yellow);color:var(--navy);padding:10px 20px;border-radius:6px;font-weight:800;font-size:15px;white-space:nowrap;transition:background 0.2s}
     .nav-cta:hover{background:var(--yellow-dark)}
-    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:0.5rem}
-    .hamburger span{width:26px;height:2px;background:var(--navy);border-radius:2px}
-    .mobile-menu{display:none;position:fixed;inset:0;background:var(--navy-dark);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem}
-    .mobile-menu.open{display:flex}.mobile-menu a{color:white;font-size:1.3rem;font-weight:700}
-    .mobile-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:white;font-size:2rem;cursor:pointer}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+    .hamburger span{width:26px;height:2px;background:var(--navy);border-radius:2px;display:block}
+    .mobile-menu{display:none;position:fixed;inset:0;background:var(--navy-dark);z-index:200;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:80px;gap:0;overflow-y:auto}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{padding:14px 0;width:100%;text-align:center;border-bottom:1px solid rgba(255,255,255,0.08);color:white;font-size:22px;font-weight:700}
+    .mobile-menu a:hover{color:var(--yellow)}
+    .mobile-close{position:absolute;top:20px;right:24px;background:none;border:none;color:white;font-size:32px;cursor:pointer}
     .page-hero{background:linear-gradient(135deg,var(--navy-dark),var(--navy));color:white;padding:4rem 5%;text-align:center}
     .page-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:900;margin-bottom:1rem}
     .page-hero p{font-size:1.05rem;opacity:0.9;max-width:640px;margin:0 auto 2rem;line-height:1.7}
     .hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
     .btn-yellow{background:var(--yellow);color:var(--navy);padding:0.9rem 2rem;border-radius:8px;font-weight:800;font-size:0.95rem;display:inline-block;transition:all 0.2s}
-    .btn-yellow:hover{background:var(--yellow-dark)}
     .btn-outline-white{border:2px solid rgba(255,255,255,0.5);color:white;padding:0.9rem 2rem;border-radius:8px;font-weight:700;font-size:0.95rem;display:inline-block}
     .breadcrumb{background:var(--gray);padding:0.8rem 5%;font-size:0.82rem;color:var(--muted)}
     .breadcrumb a{color:var(--navy);font-weight:600}.breadcrumb span{margin:0 0.4rem}
     section{padding:4rem 5%}.section-inner{max-width:1200px;margin:0 auto}
-    .section-title{font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:800;color:var(--navy);margin-bottom:1rem}
     .content-grid{display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:start}
     .content-body h2{font-size:1.4rem;font-weight:800;color:var(--navy);margin:2rem 0 0.8rem}
     .content-body h2:first-child{margin-top:0}
@@ -52,134 +63,214 @@
     .sidebar-phone{font-size:1.4rem;font-weight:900;color:var(--yellow);display:block;margin-bottom:0.3rem}
     .sidebar-note{font-size:0.75rem;opacity:0.65;margin-bottom:1.5rem}
     .btn-sidebar{display:block;background:var(--yellow);color:var(--navy);text-align:center;padding:0.9rem;border-radius:8px;font-weight:800;margin-bottom:0.8rem}
-    .btn-sidebar:hover{background:var(--yellow-dark)}
-    .services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin:1.5rem 0}
     .service-card{background:var(--gray);border:1px solid var(--border);border-radius:10px;padding:1.2rem;text-align:center;transition:all 0.2s}
     .service-card:hover{border-color:var(--yellow);transform:translateY(-2px)}
-    .service-card .icon{font-size:2rem;margin-bottom:0.5rem}
+    .service-card .icon{margin-bottom:0.5rem;display:flex;align-items:center;justify-content:center;height:56px}
+    .service-card .icon img{width:48px;height:48px;object-fit:contain}
     .service-card h4{font-size:0.88rem;font-weight:700;color:var(--navy)}
-    .process-steps{display:flex;flex-direction:column;gap:1rem;margin:1.5rem 0}
-    .step{display:flex;gap:1rem;align-items:flex-start}
-    .step-num{width:36px;height:36px;background:var(--yellow);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;flex-shrink:0}
-    .step h4{font-size:0.92rem;font-weight:700;margin-bottom:0.2rem;color:var(--navy)}
-    .step p{font-size:0.85rem;color:var(--muted);line-height:1.5}
     .cta-banner{background:var(--yellow);padding:3rem 5%;text-align:center}
     .cta-banner h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:var(--navy);margin-bottom:0.8rem}
     .cta-banner p{color:var(--navy);opacity:0.8;margin-bottom:2rem}
     .cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
     .btn-navy-lg{background:var(--navy);color:white;padding:1rem 2.5rem;border-radius:8px;font-weight:800;font-size:1rem;display:inline-block}
-    .btn-navy-lg:hover{background:var(--navy-dark)}
     .btn-outline-navy{border:2px solid var(--navy);color:var(--navy);padding:1rem 2.5rem;border-radius:8px;font-weight:700;font-size:1rem;display:inline-block}
-    footer{background:var(--navy-dark);color:rgba(255,255,255,0.7);padding:3rem 5% 2rem}
+    footer{background:var(--navy-dark);color:rgba(255,255,255,0.7);padding:56px 5% 24px}
     .footer-inner{max-width:1300px;margin:0 auto}
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.1)}
-    .footer-logo img{height:55px;width:auto;margin-bottom:1rem;border-radius:6px}
-    .footer-logo p{font-size:0.85rem;line-height:1.7}
-    .footer-col h4{color:var(--yellow);font-size:0.85rem;font-weight:700;text-transform:uppercase;margin-bottom:1rem}
-    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
-    .footer-col a{font-size:0.85rem;transition:color 0.2s}.footer-col a:hover{color:var(--yellow)}
-    .footer-bottom{display:flex;justify-content:space-between;padding-top:1.5rem;font-size:0.78rem;flex-wrap:wrap;gap:0.5rem}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.1)}
+    .footer-logo img{height:52px;width:auto;margin-bottom:16px;border-radius:6px}
+    .footer-logo p{font-size:14px;line-height:1.75}
+    .footer-phone{font-size:20px;font-weight:800;color:var(--yellow);margin-top:16px}
+    .footer-hours{font-size:13px;color:rgba(255,255,255,0.45);margin-top:4px}
+    .footer-col h4{color:var(--yellow);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+    .footer-col ul{display:flex;flex-direction:column;gap:10px;list-style:none}
+    .footer-col a{font-size:14px;transition:color 0.2s}
+    .footer-col a:hover{color:var(--yellow)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:20px;font-size:12px;flex-wrap:wrap;gap:8px}
     .fade-up{opacity:0;transform:translateY(25px);transition:opacity 0.6s ease,transform 0.6s ease}
     .fade-up.visible{opacity:1;transform:translateY(0)}
-    @media(max-width:1024px){.content-grid{grid-template-columns:1fr}.sidebar-card{position:static}.nav-links{display:none}.hamburger{display:flex}.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}}
-    @media(max-width:600px){.footer-grid{grid-template-columns:1fr}}
-</style>
+    @media(max-width:1024px){.content-grid{grid-template-columns:1fr}.sidebar-card{position:static}.nav-links{display:none}.hamburger{display:flex}.footer-top{grid-template-columns:1fr 1fr;gap:2rem}}
+    @media(max-width:600px){.footer-top{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
 <div class="top-bar">
-  <div>📍 Serving Central Florida · Orange, Osceola, Lake, Polk, Seminole & beyond</div>
+  <div>📍 Serving Central Florida · Orange, Osceola, Lake, Polk, Seminole &amp; beyond</div>
   <div><strong style="color:var(--yellow);">Mon–Sat 8AM–6PM</strong> · <span class="top-bar-badge">24/7 Emergency Line</span> · <a href="tel:4079222276">(407) 922-2276</a></div>
 </div>
 <nav>
   <div class="nav-inner">
-    <a href="../index.html"><img src="../assets/logos/logo-official.jpg" style="height:100px;width:auto;" alt="Pest Pro LLC"/></a>
+    <a href="../index.html" class="nav-logo"><img src="../assets/logos/logo-official-transparent.png" alt="Pest Pro LLC" width="180" height="62"/></a>
     <ul class="nav-links">
-      <li><a href="../index.html#services">Services</a></li>
-      <li><a href="../about.html">About Us</a></li>
-      <li><a href="../index.html#pricing">Pricing</a></li>
+      <li class="nav-dropdown">
+        <a href="../index.html#services">Services</a>
+        <div class="dropdown-menu">
+          <div class="dropdown-menu-inner">
+            <a href="../services/ant-control.html">Ant Control</a>
+            <a href="../services/roach-control.html">Roach Extermination</a>
+            <a href="../services/rodent-control.html">Rodent Control</a>
+            <a href="../services/bed-bug-treatment.html">Bed Bug Treatment</a>
+            <a href="../services/mosquito-control.html">Mosquito Treatment</a>
+            <a href="../services/wasp-bee-removal.html">Wasps &amp; Stinging Insects</a>
+            <a href="../services/spider-control.html">Spider Control</a>
+            <a href="../services/flea-tick-control.html">Fleas &amp; Ticks</a>
+            <a href="../services/occasional-invaders.html">Occasional Invaders</a>
+            <div class="dropdown-divider"></div>
+            <a href="../services/residential.html">Residential Programs</a>
+            <a href="../services/commercial.html">Commercial Programs</a>
+            <a href="../services/healthcare.html">Healthcare IPM</a>
+            <a href="../services/food-service.html">Food Service IPM</a>
+            <a href="../services/hospitality-training.html">Hospitality Training</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../faq.html">FAQ</a></li>
       <li><a href="../blog.html">Blog</a></li>
       <li><a href="../index.html#service-area">Service Area</a></li>
       <li><a href="../careers.html">Careers</a></li>
       <li><a href="../index.html#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
-      <a href="tel:4079222276" class="nav-phone">📞 (407) 922-2276</a>
-      <a href="../index.html#contact" class="nav-cta">Free Inspection</a>
-      <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')"><span></span><span></span><span></span></div>
+      <a href="tel:4079222276" class="nav-phone">(407) 922-2276</a>
+      <a href="../index.html#contact" class="nav-cta">Schedule Now</a>
+      <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">✕</button>
-  <a href="../index.html">Home</a>
-  <a href="../index.html#services">Services</a>
-  <a href="../about.html">About Us</a>
-  <a href="../careers.html">Careers</a>
-  <a href="../index.html#contact">Contact</a>
-  <a href="tel:4079222276" style="color:var(--yellow);font-size:1.5rem;">📞 (407) 922-2276</a>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+  <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')" aria-label="Close menu">&#x2715;</button>
+  <a href="../index.html#services" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services</a>
+  <a href="../about.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">About Us</a>
+  <a href="../faq.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">FAQ</a>
+  <a href="../blog.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Blog</a>
+  <a href="../careers.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Careers</a>
+  <a href="../index.html#service-area" onclick="document.getElementById('mobileMenu').classList.remove('open')">Service Area</a>
+  <a href="../index.html#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
+  <a href="tel:4079222276" style="color:var(--yellow);font-size:22px;margin-top:8px;">(407) 922-2276</a>
 </div>
+
 <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span>Pest Control in St. Cloud</div>
-<div class="page-hero"><h1>Pest Control in St. Cloud, FL</h1>
-  <p>Fast, professional pest control for homes and businesses in St. Cloud and Osceola County. Licensed, local, and ready to help.</p>
-  <div class="hero-actions"><a href="../index.html#contact" class="btn-yellow">Schedule Free Inspection</a><a href="tel:4079222276" class="btn-outline-white">📞 (407) 922-2276</a></div>
-</div>
-<section style="background:var(--gray);"><div class="section-inner"><div class="content-grid">
-<div class="content-body fade-up">
-  <h2>Pest Control Services in St. Cloud, Florida</h2>
-  <p>Pest Pro LLC provides professional pest control services to homes and businesses throughout St. Cloud and the surrounding Osceola County area. St. Cloud is a growing community south of Orlando ,  and like all of Central Florida, it faces year-round pest pressure from ants, roaches, rodents, mosquitoes, bed bugs, and more.</p>
-  <p>Our highly trained technicians serve St. Cloud residents and business owners with the same science-backed Integrated Pest Management approach that has made Pest Pro one of Central Florida's most trusted names in pest control since 1986.</p>
-  <h2>Services We Provide in St. Cloud</h2>
-  <div class="services-grid">
-    <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/pest-ant-1.png" alt="Ants" style="width:48px;height:48px;object-fit:contain;"></div><h4><a href="../services/ant-control.html" style="color:var(--navy);">Ant Control</a></h4></div>
-    <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/pest-roach-v2.png" alt="Roaches" style="width:48px;height:48px;object-fit:contain;"></div><h4><a href="../services/roach-control.html" style="color:var(--navy);">Roach Extermination</a></h4></div>
-    <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/pest-rat-1.png" alt="Rodents" style="width:48px;height:48px;object-fit:contain;"></div><h4><a href="../services/rodent-control.html" style="color:var(--navy);">Rodent Control</a></h4></div>
-    <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/pest-bedbug-2.png" alt="Bed Bugs" style="width:48px;height:48px;object-fit:contain;"></div><h4><a href="../services/bed-bug-treatment.html" style="color:var(--navy);">Bed Bug Treatment</a></h4></div>
-    <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/pest-mosquito-v2.png" alt="Mosquitoes" style="width:48px;height:48px;object-fit:contain;"></div><h4><a href="../services/mosquito-control.html" style="color:var(--navy);">Mosquito Control</a></h4></div>
-    <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/pest-spider.png" alt="Spiders" style="width:48px;height:48px;object-fit:contain;"></div><h4><a href="../services/spider-control.html" style="color:var(--navy);">Spider Control</a></h4></div>
-    <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/pest-wasp.png" alt="Wasps" style="width:48px;height:48px;object-fit:contain;"></div><h4><a href="../services/wasp-bee-removal.html" style="color:var(--navy);">Wasp & Bee Removal</a></h4></div>
-    <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/building-commercial-tall.png" alt="Commercial" style="width:48px;height:48px;object-fit:contain;"></div><h4><a href="../services/commercial.html" style="color:var(--navy);">Commercial Programs</a></h4></div>
+<div class="page-hero">
+  <h1>Pest Control in St. Cloud, FL</h1>
+  <p>A city with deep roots, massive lakes, and untouched natural land — and the pest pressure that comes with all of it. We've been protecting St. Cloud homes and businesses for decades.</p>
+  <div class="hero-actions">
+    <a href="../index.html#contact" class="btn-yellow">Schedule Free Inspection</a>
+    <a href="tel:4079222276" class="btn-outline-white">(407) 922-2276</a>
   </div>
-  <h2>Residential Pest Control in St. Cloud</h2>
-  <p>Our residential programs protect St. Cloud homes from the full range of Central Florida pests. Starting at just $26/month for quarterly service, we offer plans that fit every budget and property type. Every service is performed by a highly trained technician using eco-conscious, family-safe treatments.</p>
-  <h2>Commercial Pest Control in St. Cloud</h2>
-  <p>We serve restaurants, hotels, offices, warehouses, healthcare facilities, and retail properties throughout St. Cloud. Our commercial programs include full service documentation and compliance reporting.</p>
-  <h2>Why St. Cloud Residents Choose Pest Pro</h2>
-  <ul>
-    <li>Local technicians who know Osceola County's specific pest pressures</li>
-    <li>Rooted in 40+ years of experience ,  independently operated since 2020</li>
-    <li>Five-star Google reviews   100% positive rating</li>
-    <li>Mon–Sat 8AM–6PM service, 24/7 emergency line</li>
-    <li>Licensed & insured in Florida</li>
-    <li>Free inspection ,  no obligation</li>
-  </ul>
-  <h2>Schedule Your Free Pest Inspection in St. Cloud</h2>
-  <p>Call us at <a href="tel:4079222276" style="color:var(--navy);font-weight:700;">(407) 922-2276</a> or fill out our online form. We'll schedule your free inspection at a time that works for you and have a plan ready the same day.</p>
 </div>
-<div class="fade-up"><div class="sidebar-card">
+
+<section style="background:var(--gray);">
+  <div class="section-inner">
+    <div class="content-grid">
+      <div class="content-body fade-up">
+        <h2>Pest Control Services in St. Cloud, Florida</h2>
+        <p>St. Cloud carries more history than most Central Florida cities its size, and more natural geography too. Lake Tohopekaliga — Lake Toho to anyone who actually lives here — and East Lake Tohopekaliga are two of the largest lakes in Osceola County, part of a vast wetland and lake system that defines the southern edge of the Central Florida region. The untouched natural areas surrounding St. Cloud create active wildlife corridors where pest pressure from roaches, rodents, mosquitoes, and occasional invaders is driven by the natural environment as much as by the built one.</p>
+        <p>Pest Pro serves St. Cloud's residential neighborhoods, growing new construction areas, and commercial clients — including historic properties that present their own unique pest challenges. We know this community and we know what the environment here demands.</p>
+
+        <h2>Services We Provide in St. Cloud</h2>
+        <div class="services-grid">
+          <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/pest-ant-1.png" alt="Ants"/></div><h4><a href="../services/ant-control.html" style="color:var(--navy);">Ant Control</a></h4></div>
+          <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/pest-roach-v2.png" alt="Roaches"/></div><h4><a href="../services/roach-control.html" style="color:var(--navy);">Roach Extermination</a></h4></div>
+          <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/pest-rat-1.png" alt="Rodents"/></div><h4><a href="../services/rodent-control.html" style="color:var(--navy);">Rodent Control</a></h4></div>
+          <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/pest-bedbug-2.png" alt="Bed Bugs"/></div><h4><a href="../services/bed-bug-treatment.html" style="color:var(--navy);">Bed Bug Treatment</a></h4></div>
+          <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/pest-mosquito-v2.png" alt="Mosquitoes"/></div><h4><a href="../services/mosquito-control.html" style="color:var(--navy);">Mosquito Control</a></h4></div>
+          <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/pest-spider.png" alt="Spiders"/></div><h4><a href="../services/spider-control.html" style="color:var(--navy);">Spider Control</a></h4></div>
+          <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/pest-wasp.png" alt="Wasps"/></div><h4><a href="../services/wasp-bee-removal.html" style="color:var(--navy);">Wasp &amp; Bee Removal</a></h4></div>
+          <div class="service-card"><div class="icon"><img src="../assets/icons/illustrated/building-commercial-tall.png" alt="Commercial"/></div><h4><a href="../services/commercial.html" style="color:var(--navy);">Commercial Programs</a></h4></div>
+        </div>
+
+        <h2>What Makes St. Cloud's Pest Pressure Unique</h2>
+        <p>The proximity to Lake Toho and East Lake Toho means mosquito pressure here is not just seasonal — it is driven by a permanent water source that breeds mosquitoes year-round in Florida's climate. Properties within a half mile of the lake system will always face higher mosquito activity than homes in drier inland communities. Effective treatment requires addressing the source conditions, not just surface applications.</p>
+        <p>The natural corridors connecting St. Cloud's undeveloped areas to established neighborhoods also create consistent pressure from rodents and occasional invaders moving between habitats. Older structures in the historic areas of St. Cloud have the entry points and infrastructure gaps that newer construction doesn't — rodents and palmetto bugs know how to find them.</p>
+
+        <h2>Commercial Pest Control in St. Cloud</h2>
+        <p>St. Cloud's commercial base includes restaurants, retail, hospitality, and the historic properties that give the city its character. We serve commercial clients throughout St. Cloud with documented, compliance-ready pest programs. Hospitality clients in particular benefit from our experience working in properties where discretion and thoroughness are both required.</p>
+
+        <h2>Why St. Cloud Residents Choose Pest Pro</h2>
+        <ul>
+          <li>Serving Osceola County since 1988</li>
+          <li>Experienced treating lake-adjacent and nature-adjacent properties</li>
+          <li>Licensed, insured, and FDACS-certified in Florida</li>
+          <li>Five-star Google rating — 100% positive reviews</li>
+          <li>Mon–Sat 8AM–6PM, 24/7 emergency line</li>
+          <li>Free inspection, no obligation</li>
+        </ul>
+
+        <h2>Schedule Your Free Inspection</h2>
+        <p>Call <a href="tel:4079222276" style="color:var(--navy);font-weight:700;">(407) 922-2276</a> or fill out our contact form. We cover all of St. Cloud and southern Osceola County.</p>
+      </div>
+      <div class="fade-up">
+        <div class="sidebar-card">
           <h3>Ready to Get Started?</h3>
-          <p>Fast, professional service across Central Florida. Call or schedule online.</p>
+          <p>Serving St. Cloud and Osceola County. Call or schedule online.</p>
           <a href="tel:4079222276" class="sidebar-phone">(407) 922-2276</a>
           <p class="sidebar-note">Mon–Sat 8AM–6PM · 24/7 Emergency Line</p>
           <a href="../index.html#contact" class="btn-sidebar">Free Inspection →</a>
-        </div></div>
-</div></div></section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="cta-banner">
-  <h2>Serving St. Cloud & All of Osceola County</h2>
-  <p>Schedule your free pest inspection today.</p>
+  <h2>Serving St. Cloud and Southern Osceola County</h2>
+  <p>Lake Toho · East Lake Toho · Historic Downtown · and surrounding communities</p>
   <div class="cta-actions">
     <a href="../index.html#contact" class="btn-navy-lg">Schedule Free Inspection</a>
-    <a href="tel:4079222276" class="btn-outline-navy">📞 (407) 922-2276</a>
+    <a href="tel:4079222276" class="btn-outline-navy">(407) 922-2276</a>
   </div>
 </div>
+
 <footer>
   <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-logo"><img src="../assets/logos/logo-official.jpg" alt="Pest Pro LLC"/><p>Florida's Premier Pest Control Experts .  Proven, Trusted, Guaranteed. Serving Central Florida since 1986.</p><div style="margin-top:1rem;font-size:1rem;font-weight:800;color:var(--yellow);">(407) 922-2276</div></div>
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="../services/bed-bug-treatment.html">Bed Bug Treatment</a></li><li><a href="../services/ant-control.html">Ant Control</a></li><li><a href="../services/roach-control.html">Roach Extermination</a></li><li><a href="../services/rodent-control.html">Rodent Control</a></li><li><a href="../services/mosquito-control.html">Mosquito Treatment</a></li><li><a href="../services/commercial.html">Commercial Programs</a></li></ul></div>
-      <div class="footer-col"><h4>Service Area</h4><ul><li><a href="../locations/orlando.html">Orlando</a></li><li><a href="../locations/kissimmee.html">Kissimmee</a></li><li><a href="../locations/winter-garden.html">Winter Garden</a></li><li><a href="../locations/clermont.html">Clermont</a></li><li><a href="../locations/sanford.html">Sanford</a></li><li><a href="../locations/lakeland.html">Lakeland</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="../about.html">About Us</a></li><li><a href="../blog.html">Blog</a></li><li><a href="../careers.html">Careers</a></li><li><a href="../index.html#reviews">Reviews</a></li><li><a href="../index.html#contact">Contact</a></li></ul></div>
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="../assets/logos/logo-official.jpg" alt="Pest Pro LLC" loading="lazy"/>
+        <p>Florida's Premier Pest Control Experts. Proven, Trusted, Guaranteed. Family-owned, science-backed, serving Central Florida since 1988.</p>
+        <div class="footer-phone">(407) 922-2276</div>
+        <div class="footer-hours">Available 24 Hours &middot; 7 Days a Week</div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="../services/ant-control.html">Ant Control</a></li>
+        <li><a href="../services/roach-control.html">Roach Extermination</a></li>
+        <li><a href="../services/rodent-control.html">Rodent Control</a></li>
+        <li><a href="../services/bed-bug-treatment.html">Bed Bug Treatment</a></li>
+        <li><a href="../services/mosquito-control.html">Mosquito Treatment</a></li>
+        <li><a href="../services/wasp-bee-removal.html">Wasps and Stinging Insects</a></li>
+        <li><a href="../services/spider-control.html">Spider Control</a></li>
+        <li><a href="../services/flea-tick-control.html">Fleas and Ticks</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Commercial Programs</h4><ul>
+        <li><a href="../services/commercial.html">Commercial Pest Control</a></li>
+        <li><a href="../services/hospitality-training.html">Hospitality Training</a></li>
+        <li><a href="../services/healthcare.html">Healthcare IPM</a></li>
+        <li><a href="../services/food-service.html">Food Service IPM</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Service Area</h4><ul>
+        <li><a href="orlando.html">Orlando</a></li>
+        <li><a href="kissimmee.html">Kissimmee</a></li>
+        <li><a href="windermere.html">Windermere</a></li>
+        <li><a href="winter-garden.html">Winter Garden</a></li>
+        <li><a href="clermont.html">Clermont</a></li>
+        <li><a href="st-cloud.html">St. Cloud</a></li>
+        <li><a href="sanford.html">Sanford</a></li>
+        <li><a href="lakeland.html">Lakeland</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="../about.html">About Pest Pro</a></li>
+        <li><a href="../careers.html">Careers</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../blog.html">Blog and Tips</a></li>
+        <li><a href="../index.html#reviews">Customer Reviews</a></li>
+        <li><a href="../index.html#pricing">Pricing</a></li>
+        <li><a href="../index.html#contact">Contact Us</a></li>
+      </ul></div>
     </div>
-    <div class="footer-bottom"><div>© 2025 Pest Pro LLC · Licensed & Insured in Florida</div><div>Serving Orange, Osceola, Lake, Polk & Seminole Counties</div></div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Pest Pro LLC &middot; All Rights Reserved &middot; Licensed and Insured in Florida &middot; FDACS License JB304313</div>
+      <div>Serving Orange, Osceola, Lake, Polk and Seminole Counties</div>
+    </div>
   </div>
 </footer>
 <script>const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')});},{threshold:0.08});document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));</script>
