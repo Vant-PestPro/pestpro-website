@@ -188,7 +188,7 @@
     .commercial-banner h3 { font-size: 24px; font-weight: 800; margin-bottom: 10px; }
     .commercial-banner p { opacity: 0.85; font-size: 16px; line-height: 1.65; margin-bottom: 16px; }
     .commercial-types { display: flex; flex-wrap: wrap; gap: 8px; }
-    .comm-tag { background: rgba(255,184,0,0.15); border: 1px solid rgba(255,184,0,0.3); color: var(--yellow); padding: 4px 12px; border-radius: 100px; font-size: 15px; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.2s, border-color 0.2s; }
+    .comm-tag { background: rgba(255,184,0,0.15); border: 1px solid rgba(255,184,0,0.3); color: var(--yellow); padding: 8px 16px; border-radius: 100px; font-size: 15px; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.2s, border-color 0.2s; }
     a.comm-tag:hover { background: rgba(255,184,0,0.28); border-color: rgba(255,184,0,0.55); }
 
     /* ── HOW IT WORKS ── */
@@ -469,6 +469,86 @@
       .commercial-banner p { font-size: 15px !important; }
     }
   </style>
+  <!-- LocalBusiness Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://pestprollc.com/#business",
+    "name": "Pest Pro LLC",
+    "alternateName": "Pest Pro",
+    "description": "Family-owned pest control company serving Central Florida since 1988. Residential and commercial pest management including ants, roaches, rodents, bed bugs, mosquitoes, spiders, and more. Licensed, insured, available 24/7.",
+    "url": "https://pestprollc.com",
+    "logo": "https://pestprollc.com/assets/logos/logo-official.jpg",
+    "image": "https://pestprollc.com/assets/mascot/vant-hero-nametag.png",
+    "telephone": "+14079222276",
+    "email": "info@PestProLLC.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3211 Vineland Road, #107",
+      "addressLocality": "Kissimmee",
+      "addressRegion": "FL",
+      "postalCode": "34746",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 28.3772,
+      "longitude": -81.4280
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
+    "areaServed": [
+      {"@type": "County", "name": "Orange County, FL"},
+      {"@type": "County", "name": "Osceola County, FL"},
+      {"@type": "County", "name": "Lake County, FL"},
+      {"@type": "County", "name": "Polk County, FL"},
+      {"@type": "County", "name": "Seminole County, FL"}
+    ],
+    "serviceType": [
+      "Pest Control",
+      "Ant Control",
+      "Roach Extermination",
+      "Rodent Control",
+      "Bed Bug Treatment",
+      "Mosquito Treatment",
+      "Spider Control",
+      "Wasp and Bee Removal",
+      "Flea and Tick Control",
+      "Commercial Pest Control",
+      "Healthcare IPM",
+      "Food Service IPM",
+      "Hospitality Pest Training"
+    ],
+    "priceRange": "$$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card, Check",
+    "foundingDate": "1988",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "47"
+    },
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "FDACS Pest Control Business License",
+      "credentialCategory": "license",
+      "identifier": "JB304313"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=543186568875493",
+      "https://www.google.com/maps/search/Pest+Pro+LLC+Kissimmee+FL"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -502,6 +582,7 @@
             <a href="services/spider-control.html">Spider Control</a>
             <a href="services/flea-tick-control.html">Fleas &amp; Ticks</a>
             <div class="dropdown-divider"></div>
+            <a href="services/occasional-invaders.html">Occasional Invaders</a>
             <a href="services/residential.html">Residential Programs</a>
             <a href="services/commercial.html">Commercial Programs</a>
             <a href="services/healthcare.html">Healthcare IPM</a>
@@ -650,7 +731,7 @@
         <p>Interior and exterior treatments for homes, yards, and commercial properties.</p>
         <span class="service-link">Learn More &rarr;</span>
       </a>
-      <a href="services/residential.html" class="service-card fade-up">
+      <a href="services/occasional-invaders.html" class="service-card fade-up">
         <div class="service-icon" style="background:linear-gradient(135deg,#e8eaf6,#c5cae9);padding:4px;overflow:hidden;"><img src="assets/icons/illustrated/pest-silverfish.png" alt="Silverfish" loading="lazy" style="max-width:100%;max-height:62px;width:auto;height:auto;object-fit:contain;display:block;margin:auto;"></div>
         <h3>Occasional Invaders</h3>
         <p>Earwigs, silverfish, millipedes and other household pests treated as needed.</p>
