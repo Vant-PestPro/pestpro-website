@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy | Pest Pro LLC</title>
+  <meta name="description" content="Pest Pro LLC's privacy policy. Learn how we collect, use, and protect your personal information."/>
+  <link rel="canonical" href="https://pestprollc.com/privacy-policy"/>
+  <meta name="robots" content="noindex, follow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--navy:#1a2557;--navy-dark:#111840;--yellow:#FFB800;--yellow-dark:#e0a200;--red:#cc2200;--white:#ffffff;--gray:#f5f6f8;--text:#1a1a1a;--muted:#6b7280;--border:#e5e7eb;--yellow-bg:#fffbf0}
+    html{scroll-behavior:smooth;overflow-x:hidden}body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden}a{text-decoration:none;color:inherit}
+    .top-bar{background:var(--navy-dark);color:rgba(255,255,255,0.85);padding:0.5rem 5%;font-size:0.8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}
+    .top-bar a{color:var(--yellow);font-weight:600}.top-bar-badge{background:var(--red);color:white;padding:0.15rem 0.6rem;border-radius:100px;font-size:0.72rem;font-weight:700;margin-left:0.5rem}
+    nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:2px solid var(--yellow);padding:0 5%}
+    .nav-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:80px;gap:16px}
+    .nav-logo img{height:68px;width:auto}
+    .nav-links{display:flex;gap:0;list-style:none}
+    .nav-links a{padding:8px 12px;font-size:15px;font-weight:600;color:var(--navy);border-radius:6px;transition:all 0.2s;white-space:nowrap}
+    .nav-links a:hover{color:var(--yellow-dark);background:var(--yellow-bg)}
+    .nav-dropdown{position:relative}
+    .nav-dropdown>a{display:flex;align-items:center;gap:4px}
+    .nav-dropdown>a::after{content:'';display:inline-block;width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform 0.2s}
+    .nav-dropdown:hover>a::after{transform:rotate(-135deg);margin-top:2px}
+    .dropdown-menu{display:none;position:absolute;top:100%;left:0;padding-top:8px;z-index:300;min-width:220px}
+    .dropdown-menu-inner{background:white;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 32px rgba(0,0,0,0.12);padding:8px 0}
+    .nav-dropdown:hover .dropdown-menu{display:block}
+    .dropdown-menu a{display:block;padding:9px 18px;font-size:14px;font-weight:600;color:var(--navy);white-space:nowrap}
+    .dropdown-menu a:hover{background:var(--yellow-bg);color:var(--yellow-dark)}
+    .dropdown-divider{height:1px;background:var(--border);margin:6px 0}
+    .nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+    .nav-phone{font-weight:800;color:var(--navy);font-size:16px;white-space:nowrap}
+    .nav-cta{background:var(--yellow);color:var(--navy);padding:10px 20px;border-radius:6px;font-weight:800;font-size:15px;white-space:nowrap;transition:background 0.2s}.nav-cta-mobile{display:none}
+    .nav-cta:hover{background:var(--yellow-dark)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+    .hamburger span{width:26px;height:2px;background:var(--navy);border-radius:2px;display:block}
+    .mobile-menu{display:none;position:fixed;inset:0;background:var(--navy-dark);z-index:200;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:80px;gap:0;overflow-y:auto}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{padding:14px 0;width:100%;text-align:center;border-bottom:1px solid rgba(255,255,255,0.08);color:white;font-size:22px;font-weight:700}
+    .mobile-menu a:hover{color:var(--yellow)}
+    .mobile-close{position:absolute;top:20px;right:24px;background:none;border:none;color:white;font-size:32px;cursor:pointer}
+    .page-hero{background:linear-gradient(135deg,var(--navy-dark),var(--navy));color:white;padding:3rem 5%;text-align:center}
+    .page-hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;margin-bottom:0.75rem}
+    .page-hero p{font-size:0.95rem;opacity:0.8;max-width:560px;margin:0 auto}
+    .breadcrumb{background:var(--gray);padding:0.8rem 5%;font-size:0.82rem;color:var(--muted)}
+    .breadcrumb a{color:var(--navy);font-weight:600}.breadcrumb span{margin:0 0.4rem}
+    section{padding:4rem 5%}.section-inner{max-width:860px;margin:0 auto}
+    .policy-body h2{font-size:1.2rem;font-weight:800;color:var(--navy);margin:2.5rem 0 0.75rem;padding-top:0.5rem;border-top:1px solid var(--border)}
+    .policy-body h2:first-child{border-top:none;margin-top:0}
+    .policy-body p{font-size:0.95rem;line-height:1.85;color:var(--text);margin-bottom:1rem}
+    .policy-body ul{padding-left:1.4rem;margin-bottom:1rem}
+    .policy-body li{font-size:0.95rem;line-height:1.8;margin-bottom:0.4rem}
+    .policy-body a{color:var(--navy);font-weight:600;text-decoration:underline}
+    .last-updated{font-size:0.82rem;color:var(--muted);margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+    footer{background:var(--navy-dark);color:rgba(255,255,255,0.7);padding:56px 5% 24px}
+    .footer-inner{max-width:1300px;margin:0 auto}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.1)}
+    .footer-logo img{height:52px;width:auto;margin-bottom:16px;border-radius:6px}
+    .footer-logo p{font-size:14px;line-height:1.75}
+    .footer-phone{font-size:20px;font-weight:800;color:var(--yellow);margin-top:16px}
+    .footer-hours{font-size:13px;color:rgba(255,255,255,0.45);margin-top:4px}
+    .footer-col h4{color:var(--yellow);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+    .footer-col ul{display:flex;flex-direction:column;gap:10px;list-style:none}
+    .footer-col a{font-size:14px;transition:color 0.2s}
+    .footer-col a:hover{color:var(--yellow)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:20px;font-size:12px;flex-wrap:wrap;gap:8px}
+    @media(max-width:1024px){.nav-links{display:none}.hamburger{display:flex}.nav-phone{display:none}.nav-cta-desktop{display:none}.nav-cta-mobile{display:inline-flex}.footer-top{grid-template-columns:1fr 1fr;gap:2rem}}
+    @media(max-width:600px){.footer-top{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="top-bar">
+  <div>📍 Serving Central Florida · Orange, Osceola, Lake, Polk, Seminole &amp; beyond</div>
+  <div><strong style="color:var(--yellow);">Mon–Sat 8AM–6PM</strong> · <span class="top-bar-badge">24/7 Emergency Line</span> · <a href="tel:4079222276">(407) 922-2276</a></div>
+</div>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logos/logo-official-transparent.png" alt="Pest Pro LLC" width="180" height="62"/></a>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <a href="index.html#services">Services</a>
+        <div class="dropdown-menu">
+          <div class="dropdown-menu-inner">
+            <a href="services/ant-control.html">Ant Control</a>
+            <a href="services/roach-control.html">Roach Extermination</a>
+            <a href="services/rodent-control.html">Rodent Control</a>
+            <a href="services/bed-bug-treatment.html">Bed Bug Treatment</a>
+            <a href="services/mosquito-control.html">Mosquito Treatment</a>
+            <a href="services/wasp-bee-removal.html">Wasps &amp; Stinging Insects</a>
+            <a href="services/spider-control.html">Spider Control</a>
+            <a href="services/flea-tick-control.html">Fleas &amp; Ticks</a>
+            <a href="services/occasional-invaders.html">Occasional Invaders</a>
+            <div class="dropdown-divider"></div>
+            <a href="services/residential.html">Residential Programs</a>
+            <a href="services/commercial.html">Commercial Programs</a>
+            <a href="services/healthcare.html">Healthcare IPM</a>
+            <a href="services/food-service.html">Food Service IPM</a>
+            <a href="services/hospitality-training.html">Hospitality Training</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#service-area">Service Area</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:4079222276" class="nav-phone">(407) 922-2276</a>
+      <a href="index.html#contact" class="nav-cta nav-cta-desktop">Schedule Now</a>
+      <a href="tel:4079222276" class="nav-cta nav-cta-mobile">(407) 922-2276</a>
+      <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+  <button class="mobile-close" onclick="document.getElementById('mobileMenu').classList.remove('open')" aria-label="Close menu">&#x2715;</button>
+  <a href="index.html#services" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services</a>
+  <a href="about.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">About Us</a>
+  <a href="faq.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">FAQ</a>
+  <a href="blog.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Blog</a>
+  <a href="careers.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Careers</a>
+  <a href="index.html#service-area" onclick="document.getElementById('mobileMenu').classList.remove('open')">Service Area</a>
+  <a href="index.html#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
+  <a href="tel:4079222276" style="color:var(--yellow);font-size:22px;margin-top:8px;">(407) 922-2276</a>
+</div>
+
+<div class="breadcrumb"><a href="index.html">Home</a><span>›</span>Privacy Policy</div>
+<div class="page-hero">
+  <h1>Privacy Policy</h1>
+  <p>How Pest Pro LLC collects, uses, and protects your information.</p>
+</div>
+
+<section>
+  <div class="section-inner">
+    <div class="policy-body">
+      <p class="last-updated">Last updated: April 20, 2026</p>
+
+      <h2>Who We Are</h2>
+      <p>Pest Pro LLC is a licensed pest control company serving Central Florida. Our address is 3211 Vineland Road, Suite 107, Kissimmee, FL 34746. You can reach us at <a href="tel:4079222276">(407) 922-2276</a> or <a href="mailto:info@pestprollc.com">info@pestprollc.com</a>.</p>
+      <p>This policy explains what information we collect when you contact us or use our website, how we use it, and what choices you have.</p>
+
+      <h2>What Information We Collect</h2>
+      <p>We only collect information you give us directly. This includes:</p>
+      <ul>
+        <li><strong>Contact details</strong> — your name, phone number, and email address when you fill out our contact or inspection request form.</li>
+        <li><strong>Service details</strong> — information about the pest issue you're dealing with or the type of property you're inquiring about.</li>
+        <li><strong>Communications</strong> — any messages you send us by phone, email, or through our website form.</li>
+      </ul>
+      <p>We do not collect payment information through this website. We do not use tracking cookies, third-party advertising pixels, or behavioral analytics tools.</p>
+
+      <h2>How We Use Your Information</h2>
+      <p>We use the information you provide for one purpose: to respond to your inquiry and provide pest control services. Specifically, we use it to:</p>
+      <ul>
+        <li>Contact you to schedule a free inspection or follow up on your request</li>
+        <li>Communicate about your service appointments, treatment details, and follow-up visits</li>
+        <li>Send service documentation, invoices, or reports related to work we've performed</li>
+      </ul>
+      <p>We do not use your information for marketing campaigns, third-party promotions, or any purpose unrelated to your service with Pest Pro LLC.</p>
+
+      <h2>Phone, SMS, and Email Communication</h2>
+      <p>When you submit a form on our website, you agree to receive follow-up contact from Pest Pro LLC by phone, SMS text message, or email. This contact is limited to scheduling your inspection, confirming appointments, and communicating about your service.</p>
+      <p>You can opt out of SMS messages at any time by replying STOP. To opt out of email communications, reply to any email from us and ask to be removed. To stop all contact, call us at <a href="tel:4079222276">(407) 922-2276</a>.</p>
+
+      <h2>Do We Share Your Information?</h2>
+      <p>No. We do not sell, rent, or share your personal information with any third parties for their own purposes. The only people who have access to your information are Pest Pro LLC staff involved in scheduling and providing your service.</p>
+      <p>We use Formspree to process form submissions on this website. Formspree receives your form data and delivers it to us by email. Their privacy policy is available at <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">formspree.io</a>.</p>
+
+      <h2>How Long We Keep Your Information</h2>
+      <p>We keep your contact information for as long as you are an active customer or as long as needed to provide our services. If you have not received service from us and request that we delete your information, we will do so promptly.</p>
+
+      <h2>Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Ask what information we have about you</li>
+        <li>Request that we correct inaccurate information</li>
+        <li>Request that we delete your information</li>
+        <li>Opt out of any communications from us</li>
+      </ul>
+      <p>To exercise any of these rights, contact us at <a href="mailto:info@pestprollc.com">info@pestprollc.com</a> or call <a href="tel:4079222276">(407) 922-2276</a>. We will respond within a reasonable time.</p>
+
+      <h2>Security</h2>
+      <p>We take reasonable precautions to protect the information you share with us. Our website uses HTTPS encryption. We do not store your form submissions on our website — they are delivered directly to our team by email.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>Our website is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>If we update this policy, we will post the revised version here with an updated date. We encourage you to review it periodically. Continued use of our website after changes are posted means you accept the updated policy.</p>
+
+      <h2>Contact Us</h2>
+      <p>If you have any questions about this privacy policy or how we handle your information, reach out directly:</p>
+      <ul>
+        <li><strong>Phone:</strong> <a href="tel:4079222276">(407) 922-2276</a></li>
+        <li><strong>Email:</strong> <a href="mailto:info@pestprollc.com">info@pestprollc.com</a></li>
+        <li><strong>Address:</strong> 3211 Vineland Road, Suite 107, Kissimmee, FL 34746</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="assets/logos/logo-official.jpg" alt="Pest Pro LLC" loading="lazy"/>
+        <p>Florida's Premier Pest Control Experts. Proven, Trusted, Guaranteed. Family-owned, science-backed, serving Central Florida since 1988.</p>
+        <div class="footer-phone">(407) 922-2276</div>
+        <div class="footer-hours">Available 24 Hours &middot; 7 Days a Week</div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="services/ant-control.html">Ant Control</a></li>
+        <li><a href="services/roach-control.html">Roach Extermination</a></li>
+        <li><a href="services/rodent-control.html">Rodent Control</a></li>
+        <li><a href="services/bed-bug-treatment.html">Bed Bug Treatment</a></li>
+        <li><a href="services/mosquito-control.html">Mosquito Treatment</a></li>
+        <li><a href="services/wasp-bee-removal.html">Wasps and Stinging Insects</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Commercial</h4><ul>
+        <li><a href="services/commercial.html">Commercial Programs</a></li>
+        <li><a href="services/hospitality-training.html">Hospitality Training</a></li>
+        <li><a href="services/healthcare.html">Healthcare IPM</a></li>
+        <li><a href="services/food-service.html">Food Service IPM</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Service Area</h4><ul>
+        <li><a href="locations/orlando.html">Orlando</a></li>
+        <li><a href="locations/kissimmee.html">Kissimmee</a></li>
+        <li><a href="locations/windermere.html">Windermere</a></li>
+        <li><a href="locations/lake-nona.html">Lake Nona</a></li>
+        <li><a href="locations/st-cloud.html">St. Cloud</a></li>
+        <li><a href="locations/winter-garden.html">Winter Garden</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="about.html">About Pest Pro</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Pest Pro LLC &middot; All Rights Reserved &middot; Licensed and Insured in Florida &middot; FDACS License JB304313</div>
+      <div><a href="privacy-policy.html" style="color:rgba(255,255,255,0.5);">Privacy Policy</a> &middot; Serving Orange, Osceola, Lake, Polk and Seminole Counties</div>
+    </div>
+  </div>
+</footer>
+<script>const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')});},{threshold:0.08});document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));</script>
+</body>
+</html>
