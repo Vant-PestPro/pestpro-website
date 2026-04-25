@@ -1041,7 +1041,7 @@
         </div>
       </div>
       <div class="fade-up">
-        <form style="display:flex;flex-direction:column;gap:14px;" action="https://formspree.io/f/xnjlpewz" method="POST">
+        <form id="contact-form" style="display:flex;flex-direction:column;gap:14px;" action="https://formspree.io/f/xnjlpewz" method="POST">
           <div class="form-field"><label>Your Name</label><input type="text" name="name" placeholder="Your name" required /></div>
           <div class="form-field"><label>Phone Number</label><input type="tel" name="phone" placeholder="Your phone number" required /></div>
           <div class="form-field"><label>Email Address</label><input type="email" name="email" placeholder="Your email address" /></div>
@@ -1061,9 +1061,47 @@
               <option>Not Sure / Multiple Issues</option>
             </select>
           </div>
-          <button type="submit" class="form-submit">Request Free Inspection &rarr;</button>
+          <button type="submit" id="contact-submit" class="form-submit">Request Free Inspection &rarr;</button>
+          <p id="contact-success" style="display:none;font-size:15px;color:#1a6b3a;font-weight:700;text-align:center;">&#10003; Got it! We'll be in touch shortly.</p>
           <p style="font-size:12px;color:var(--muted);">By submitting you agree to receive follow-up via phone, SMS, or email. Reply STOP to opt out anytime. <a href="/privacy-policy" style="color:var(--muted);text-decoration:underline;">Privacy Policy</a></p>
         </form>
+        <script>
+        (function(){
+          var form = document.getElementById('contact-form');
+          if (!form) return;
+          form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var btn = document.getElementById('contact-submit');
+            var success = document.getElementById('contact-success');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            var data = {
+              name: form.querySelector('[name=name]').value,
+              phone: form.querySelector('[name=phone]').value,
+              email: (form.querySelector('[name=email]') || {}).value || '',
+              pest_problem: (form.querySelector('[name=pest_problem]') || {}).value || ''
+            };
+            // Fire to Railway (non-blocking, best-effort)
+            fetch('https://vant-webhook-production.up.railway.app/form-lead', {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify(data)
+            }).catch(function(){});
+            // Submit to Formspree for email backup
+            fetch('https://formspree.io/f/xnjlpewz', {
+              method: 'POST',
+              headers: {'Accept': 'application/json', 'Content-Type': 'application/json'},
+              body: JSON.stringify(data)
+            }).then(function(r){ return r.json(); }).then(function(){
+              form.style.display = 'none';
+              success.style.display = 'block';
+            }).catch(function(){
+              btn.disabled = false;
+              btn.textContent = 'Request Free Inspection \u2192';
+            });
+          });
+        })();
+        </script>
       </div>
     </div>
   </div>
