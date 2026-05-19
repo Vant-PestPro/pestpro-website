@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18101369159"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18101369159');
+  </script>
   <meta name="google-site-verification" content="rmne-9yeOifNlnt4iIPk6Y_uE0vn0qA08sFusiJicJc" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
@@ -1095,6 +1103,14 @@
             }).then(function(r){ return r.json(); }).then(function(){
               form.style.display = 'none';
               success.style.display = 'block';
+              // Google Ads conversion tracking
+              if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                  'send_to': 'AW-18101369159/jWOMCM2Uzq8cEMfys7dD',
+                  'value': 1.0,
+                  'currency': 'USD'
+                });
+              }
             }).catch(function(){
               btn.disabled = false;
               btn.textContent = 'Request Free Inspection \u2192';
